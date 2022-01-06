@@ -11,5 +11,9 @@ $component-name: "c-form";
     border: none;
     height: 60px;
     padding-inline: var(--padding);
+    transition: ease .5s;
+    &:hover {
+      background-color: rgba($color: #ffffff, $alpha: 0.26);
+    }
   }
 }

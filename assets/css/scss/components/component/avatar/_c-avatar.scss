@@ -1,0 +1,26 @@
+$component-name: "c-avatar";
+
+.#{$component-name} {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--light);
+  transition: .5s ease;
+  padding-inline: var(--padding);
+  &:hover {
+    color: var(--light);
+    background-color: rgba($color: #ffffff, $alpha: 0.16);
+  }
+  &__img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-size: cover;
+    margin-inline-end: var(--margin);
+  }
+  &__text {
+    font-style: normal;
+  }
+}

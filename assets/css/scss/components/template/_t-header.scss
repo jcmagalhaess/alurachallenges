@@ -12,4 +12,9 @@ $template-name: "t-header";
   &__search {
     width: 60%;
   }
+  &__profile {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
