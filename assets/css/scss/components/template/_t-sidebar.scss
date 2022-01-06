@@ -1,7 +1,7 @@
 $template-name: "t-sidebar";
 
 .#{$template-name} {
-  width: 15%;
+  width: 300px;
   display: flex;
   flex-flow: column;
   span {
@@ -9,5 +9,11 @@ $template-name: "t-sidebar";
     margin-block-end: var(--padding);
     font-size: 14px;
     letter-spacing: 0.2em;
+  }
+  &--right {
+    margin-inline-start: 50px;
+  }
+  &--left {
+    margin-inline-end: 50px;
   }
 }

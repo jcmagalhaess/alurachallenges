@@ -1,0 +1,51 @@
+$template-name: "t-code";
+
+.#{$template-name} {
+  width: calc(100% - 350px);
+  &__mold {
+    padding: calc(var(--padding) * 2);
+    background-color: var(--bg-color, var(--secondary));
+    border-radius: 8px;
+  }
+  &__view {
+    background-color: var(--dark);
+    padding: var(--padding);
+    border-radius: 8px;
+  }
+  &__actions {
+    display: flex;
+    width: 65px;
+    justify-content: space-between;
+  }
+  &__button {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #eee;
+    &--close {
+      @extend .#{$template-name}__button;
+      background-color: var(--close);
+    }
+    &--minimize {
+      @extend .#{$template-name}__button;
+      background-color: var(--minimize);
+    }
+    &--maximize {
+      @extend .#{$template-name}__button;
+      background-color: var(--maximize);
+    }
+  }
+  &__editor {
+    margin: 0;
+    display: flex;
+    margin-block-start: 20px;
+    code {
+      width: 100%;
+      display: flex;
+      line-height: 1.5;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
