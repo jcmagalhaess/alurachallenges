@@ -3,17 +3,17 @@ $template-name: "t-header";
 .#{$template-name} {
   margin-block: calc(var(--margin) * 3);
   &__logo {
-    width: 20%;
+    width: 15%;
     a {
       display: flex;
       align-items: center;
     }
   }
   &__search {
-    width: 60%;
+    width: 65%;
   }
   &__profile {
-    width: 20%;
+    width: 15%;
     display: flex;
     justify-content: flex-end;
   }
