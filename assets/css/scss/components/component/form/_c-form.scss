@@ -20,7 +20,16 @@ $component-name: "c-form";
       background-color: rgba($color: #ffffff, $alpha: 0.26);
     }
   }
-  input {
+  &__color {
+    @extend .#{$component-name}__input;
+    appearance: none;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--light);
+    height: calc(80px - calc(var(--margin) * 1));
+    padding: var(--margin);
+  }
+  input[type="text"] {
     height: calc(60px - calc(var(--padding) * 2));
   }
   textarea {
