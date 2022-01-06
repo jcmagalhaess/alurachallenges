@@ -15,4 +15,8 @@ $component-name: "c-button";
     border-color: var(--light);
     color: var(--light);
   }
+  &--secondary {
+    background-color: rgba($color: #5081fb, $alpha: 0.16);
+    color: var(--light);
+  }
 }
