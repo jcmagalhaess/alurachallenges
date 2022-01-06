@@ -4,7 +4,7 @@ $template-name: "t-sidebar";
   width: 15%;
   display: flex;
   flex-flow: column;
-  > span {
+  span {
     text-transform: uppercase;
     margin-block-end: var(--padding);
     font-size: 14px;

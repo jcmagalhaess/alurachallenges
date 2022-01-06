@@ -44,7 +44,7 @@
               <div class="c-menu__icon">
                 <i class="fas fa-code"></i>
               </div>
-              <span class="c-menu__label">Editor de código</span>
+              <p class="c-menu__label">Editor de código</p>
             </a>
           </li>
           <li class="c-menu__item">
@@ -52,17 +52,28 @@
               <div class="c-menu__icon">
                 <i class="fas fa-users"></i>
               </div>
-              <span class="c-menu__label">Comunidade</span>
+              <p class="c-menu__label">Comunidade</p>
             </a>
           </li>
         </ul>
       </nav>
     </aside>
     <aside class="t-sidebar">
-      <span>Seu projeto</span>
       <form class="c-form">
-        <input type="text" class="c-form__input" placeholder="Nome do seu projeto">
-        <textarea class="c-form__input u-mb--2" rows="3" placeholder="Descrição do seu projeto"></textarea>
+        <span>Seu projeto</span>
+        <div class="c-form__group u-mb--2">
+          <input type="text" class="c-form__input" placeholder="Nome do seu projeto">
+          <textarea class="c-form__input u-mb--2" placeholder="Descrição do seu projeto"></textarea>
+        </div>
+        <span>Personalização</span>
+        <div class="c-form__group u-mb--2">
+          <select class="c-form__input">
+            <option value="javascript">Javascript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="php">PHP</option>
+          </select>
+        </div>
       </form>
     </aside>
   </div>

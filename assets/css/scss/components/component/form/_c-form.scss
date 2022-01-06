@@ -1,8 +1,12 @@
 $component-name: "c-form";
 
 .#{$component-name} {
+  &__group {
+    display: flex;
+    flex-flow: column;
+  }
   &__input {
-    width: calc(100% - calc(var(--padding)*2));
+    width: calc(100% - calc(var(--padding) * 2));
     background-color: rgba($color: #ffffff, $alpha: 0.16);
     border-radius: 8px;
     display: flex;
@@ -10,13 +14,28 @@ $component-name: "c-form";
     justify-content: center;
     border: none;
     padding: var(--padding);
-    transition: ease .5s;
+    transition: ease 0.5s;
     color: var(--light);
     &:hover {
       background-color: rgba($color: #ffffff, $alpha: 0.26);
     }
   }
   input {
-    height: calc(60px - calc(var(--padding)*2));
+    height: calc(60px - calc(var(--padding) * 2));
+  }
+  textarea {
+    --height: calc(110px - calc(var(--padding) * 2));
+    height: var(--height);
+    max-height: var(--height);
+    min-height: var(--height);
+  }
+  select {
+    width: 100%;
+    font-size: 16px;
+    padding-block: 20px;
+    option {
+      color: var(--light);
+      background-color: var(--primary);
+    }
   }
 }
