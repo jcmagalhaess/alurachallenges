@@ -43,7 +43,7 @@
       <nav class="c-menu js-menu">
         <ul class="c-menu__list">
           <li class="c-menu__item">
-            <a href="./index.html" class="c-menu__target c-menu__target--active">
+            <a href="./index.html" class="c-menu__target">
               <div class="c-menu__icon">
                 <i class="fas fa-code"></i>
               </div>
@@ -51,7 +51,7 @@
             </a>
           </li>
           <li class="c-menu__item">
-            <a href="./comunidade.html" class="c-menu__target">
+            <a href="./comunidade.html" class="c-menu__target c-menu__target--active">
               <div class="c-menu__icon">
                 <i class="fas fa-users"></i>
               </div>
@@ -62,57 +62,6 @@
         <div class="c-menu__divider"></div>
       </nav>
     </aside>
-    <main>
-      <form class="c-form">
-        <div class="l-row l-row--justifyBetween">
-          <div class="t-code">
-            <div class="t-code__mold">
-              <div class="t-code__view">
-                <div class="t-code__actions">
-                  <span class="t-code__button--close"></span>
-                  <span class="t-code__button--minimize"></span>
-                  <span class="t-code__button--maximize"></span>
-                </div>
-                <pre class="t-code__editor">
-                  <code contenteditable="true" aria-label="editor">
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-  const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
-  }
-  return go(f, seed, [])
-}
-                  </code>
-                </pre>
-              </div>
-            </div>
-            <button class="c-button c-button--secondary u-mb--2">Visualizar com o highlight</button>
-          </div>
-          <aside class="t-sidebar t-sidebar--right">
-            <span>Seu projeto</span>
-            <div class="c-form__group u-mb--2">
-              <input type="text" class="c-form__input" placeholder="Nome do seu projeto">
-              <textarea class="c-form__input u-mb--2" placeholder="Descrição do seu projeto"></textarea>
-            </div>
-            <span>Personalização</span>
-            <div class="c-form__group u-mb--2">
-              <select class="c-form__input">
-                <option value="javascript">Javascript</option>
-                <option value="python">Python</option>
-                <option value="java">Java</option>
-                <option value="php">PHP</option>
-              </select>
-              <input type="color" class="c-form__color u-mb--2">
-            </div>
-            <button class="c-button">Salvar projeto</button>
-          </aside>
-        </div>
-      </form>
-    </main>
   </div>
 
 </body>
