@@ -16,7 +16,6 @@ body {
   padding-block: 0;
   padding-inline: calc(var(--padding) * 3);
   font-size: 16px;
-  letter-spacing: 0.03em;
   color: var(--light);
   font-family: var(--font-inter);
   background-color: var(--primary);
@@ -26,7 +25,6 @@ a {
   text-decoration: none;
   color: var(--secondary);
   transition: 0.3s ease;
-  font-style: italic;
   &:hover {
     color: var(--primary);
   }

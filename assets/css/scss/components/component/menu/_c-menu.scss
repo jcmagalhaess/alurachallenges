@@ -1,0 +1,42 @@
+$component-name: "c-menu";
+
+.#{$component-name} {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+  }
+  &__item {
+    margin-block-end: var(--padding);
+  }
+  &__target {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--light);
+    &--active, &:hover {
+      color: var(--light);
+      .#{$component-name}__icon {
+        background-color: var(--secondary);
+      }
+    }
+  }
+  &__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: rgba($color: #5081fb, $alpha: 0.16);
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+  }
+  &__label {
+    display: flex;
+    height: 100%;
+    padding-inline: var(--padding);
+  }
+}

@@ -1,0 +1,13 @@
+$template-name: "t-sidebar";
+
+.#{$template-name} {
+  width: 20%;
+  display: flex;
+  flex-flow: column;
+  > span {
+    text-transform: uppercase;
+    margin-block-end: var(--padding);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+  }
+}
