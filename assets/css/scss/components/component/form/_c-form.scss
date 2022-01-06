@@ -1,0 +1,15 @@
+$component-name: "c-form";
+
+.#{$component-name} {
+  &__input {
+    width: calc(100% - calc(var(--padding)*2));
+    background-color: rgba($color: #ffffff, $alpha: 0.16);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    height: 60px;
+    padding-inline: var(--padding);
+  }
+}

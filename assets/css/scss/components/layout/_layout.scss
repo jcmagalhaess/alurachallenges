@@ -8,5 +8,10 @@
 
 .l-row {
   display: flex;
-  padding-inline: var(--padding);
+  &--verticalCenter {
+    align-items: center;
+  }
+  &--justifyBetween {
+    justify-content: space-between;
+  }
 }

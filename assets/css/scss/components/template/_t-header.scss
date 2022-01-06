@@ -1,5 +1,15 @@
 $template-name: "t-header";
 
 .#{$template-name} {
-    margin-block: calc(var(--margin)*3);
+  margin-block: calc(var(--margin) * 3);
+  &__logo {
+    width: 20%;
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__search {
+    width: 60%;
+  }
 }
