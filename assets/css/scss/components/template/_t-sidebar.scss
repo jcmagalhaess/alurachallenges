@@ -4,6 +4,9 @@ $template-name: "t-sidebar";
   width: 300px;
   display: flex;
   flex-flow: column;
+  @include breakpoint(medium-only) {
+    width: auto;
+  }
   span {
     text-transform: uppercase;
     margin-block-end: var(--padding);
@@ -12,8 +15,14 @@ $template-name: "t-sidebar";
   }
   &--right {
     margin-inline-start: 50px;
+    @include breakpoint(medium-only) {
+      margin-inline-start: 0;
+    }
   }
   &--left {
     margin-inline-end: 50px;
+    @include breakpoint(medium-only) {
+      margin-inline-end: 0;
+    }
   }
 }

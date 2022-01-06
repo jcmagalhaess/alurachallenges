@@ -1,6 +1,26 @@
 $component-name: "c-menu";
 
 .#{$component-name} {
+  transition: .5s ease;
+  @include breakpoint(medium-only) {
+    --width: 350px;
+    position: fixed;
+    width: calc(var(--width) - calc(var(--padding) * 2));
+    height: 100vh;
+    top: 100px;
+    background-color: var(--primary);
+    right: calc(-1 * var(--width));
+    padding: var(--padding);
+  }
+  &__divider {
+    display: none;
+    @include breakpoint(medium-only) {
+      display: flex;
+      margin-block-start: calc(var(--margin)*2);
+      border-block-start: 1px solid var(--secondary);
+      padding-block-start: var(--padding);
+    }
+  }
   &__list {
     margin: 0;
     padding: 0;
@@ -16,7 +36,8 @@ $component-name: "c-menu";
     align-items: center;
     cursor: pointer;
     color: var(--light);
-    &--active, &:hover {
+    &--active,
+    &:hover {
       color: var(--light);
       .#{$component-name}__icon {
         background-color: var(--secondary);

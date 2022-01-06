@@ -2,8 +2,14 @@ $template-name: "t-header";
 
 .#{$template-name} {
   margin-block: calc(var(--margin) * 3);
+  .l-row {
+    flex-flow: row;
+  }
   &__logo {
     width: 350px;
+    @include breakpoint(medium-only) {
+      width: 60%;
+    }
     a {
       display: flex;
       align-items: center;
@@ -11,10 +17,47 @@ $template-name: "t-header";
   }
   &__search {
     width: calc(100% - 700px);
+    @include breakpoint(medium-only) {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      margin-inline: 20px;
+    }
   }
   &__profile {
     width: 350px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    @include breakpoint(medium-only) {
+      width: 50px;
+      .c-avatar {
+        display: none;
+      }
+    }
+  }
+  &__button {
+    display: none;
+    @include breakpoint(medium-only) {
+      display: inline-flex;
+      padding: 0;
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+      }
+      background: none;
+      border: none;
+      border-radius: 16px;
+      font-size: 16px;
+      color: var(--light);
+      cursor: pointer;
+      &:hover {
+        background-color: rgba($color: #5081fb, $alpha: 0.16);
+      }
+    }
   }
 }

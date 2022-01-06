@@ -1,3 +1,11 @@
 .is-disabled {
   opacity: 0.5;
 }
+
+.is-open {
+  right: 0;
+}
+
+.is-visible {
+  display: flex !important;
+}

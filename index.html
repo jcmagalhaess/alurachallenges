@@ -20,24 +20,27 @@
           <img src="./assets/img/logo.png" alt="Logo da Alura DEV">
         </a>
         <div class="t-header__search">
-          <form class="c-form">
+          <form class="c-form js-search">
             <input type="text" class="c-form__input" placeholder="Busque por algo">
           </form>
         </div>
-        <a href="./" class="t-header__profile">
-          <div class="c-avatar">
-            <figure class="c-avatar__img" style="background-image: url(assets/img/photo.png);"></figure>
-            <span class="c-avatar__text">Harry</span>
-          </div>
-        </a>
+        <div class="t-header__profile">
+          <a href="https://github.com/jcmagalhaess/" target="_blank" class="c-avatar js-profile">
+            <figure class="c-avatar__img" style="background-image: url(assets/img/profile.jpeg);"></figure>
+            <span class="c-avatar__text">Júlio</span>
+          </a>
+          <button class="t-header__button" onclick="menuToggle()">
+            <i class="fas fa-ellipsis-v"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
-  <div class="l-row l-row--justifyBetween">
+  <div class="l-row l-row--justifyBetween u-mb--2">
     <aside class="t-sidebar t-sidebar--left">
       <span>Menu</span>
-      <nav class="c-menu">
+      <nav class="c-menu js-menu">
         <ul class="c-menu__list">
           <li class="c-menu__item">
             <a href="" class="c-menu__target c-menu__target--active">
@@ -47,7 +50,7 @@
               <p class="c-menu__label">Editor de código</p>
             </a>
           </li>
-          <li class="c-menu__item">
+          <li class="c-menu__item is-disabled">
             <a href="" class="c-menu__target">
               <div class="c-menu__icon">
                 <i class="fas fa-users"></i>
@@ -56,6 +59,7 @@
             </a>
           </li>
         </ul>
+        <div class="c-menu__divider"></div>
       </nav>
     </aside>
     <main>
@@ -112,5 +116,5 @@ const unfold = (f, seed) => {
   </div>
 
 </body>
-
+<script src="assets/js/main.min.js"></script>
 </html>

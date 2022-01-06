@@ -2,6 +2,9 @@ $template-name: "t-code";
 
 .#{$template-name} {
   width: calc(100% - 350px);
+  @include breakpoint(medium-only) {
+    width: auto;
+  }
   &__mold {
     padding: calc(var(--padding) * 2);
     background-color: var(--bg-color, var(--secondary));
@@ -39,6 +42,7 @@ $template-name: "t-code";
     margin: 0;
     display: flex;
     margin-block-start: 20px;
+    overflow-x: scroll;
     code {
       width: 100%;
       display: flex;

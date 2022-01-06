@@ -1,0 +1,24 @@
+// Menu Mobile
+function menuToggle() {
+  const btnTarget = event.target;
+  const profile = document.querySelector(".js-profile");
+  const menu = document.querySelector(".js-menu");
+
+  // Change Icon Button
+  if (btnTarget.classList.value == "fas fa-ellipsis-v") {
+    btnTarget.classList.remove("fas", "fa-ellipsis-v");
+    btnTarget.classList.add("fas", "fa-times");
+  } else {
+    btnTarget.classList.remove("fas", "fa-times");
+    btnTarget.classList.add("fas", "fa-ellipsis-v");
+  }
+
+  
+  menu.appendChild(profile)
+  menu.classList.toggle("is-open");
+}
+
+function searchToggle() {
+  const menu = document.querySelector(".js-search");
+  menu.classList.toggle("is-visible");
+}
