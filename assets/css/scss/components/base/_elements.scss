@@ -1,0 +1,48 @@
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: var(--light);
+  font-family: var(--font-inter);
+  background-color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: 0.3s ease;
+  font-style: italic;
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+@for $h from 1 to 7 {
+  h#{$h} {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--light);
+    margin-block-end: 1.5em;
+  }
+}
+
+section {
+  width: 100%;
+  padding-block: calc(var(--padding) * 2);
+}
+
+figure,
+img {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}

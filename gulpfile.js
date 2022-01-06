@@ -11,6 +11,7 @@ function scssTask() {
   return src("assets/css/scss/**/*.scss", { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([cssnano()]))
+    .pipe(rename("main.min.css"))
     .pipe(dest("assets/css", { sourcemaps: "." }));
 }
 
