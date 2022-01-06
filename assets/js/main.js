@@ -13,12 +13,21 @@ function menuToggle() {
     btnTarget.classList.add("fas", "fa-ellipsis-v");
   }
 
-  
-  menu.appendChild(profile)
+  menu.appendChild(profile);
   menu.classList.toggle("is-open");
 }
 
 function searchToggle() {
   const menu = document.querySelector(".js-search");
   menu.classList.toggle("is-visible");
+}
+
+function inputColor() {
+  const inputColor = document.querySelector(".js-input-color").value;
+  const moldColor = document.querySelector(".js-mold")
+  const color = '--bg-color: ' + inputColor
+
+  moldColor.setAttribute('style', color)
+
+  console.log(moldColor, inputColor);
 }

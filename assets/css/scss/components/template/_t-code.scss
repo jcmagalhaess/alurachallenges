@@ -7,7 +7,7 @@ $template-name: "t-code";
   }
   &__mold {
     padding: calc(var(--padding) * 2);
-    background-color: var(--bg-color, var(--secondary));
+    background-color: var(--bg-color, #6BD1FF);
     border-radius: 8px;
   }
   &__view {
