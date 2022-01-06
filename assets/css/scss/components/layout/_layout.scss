@@ -1,0 +1,12 @@
+.l-container {
+  width: 90%;
+  margin: auto;
+  &--full {
+    width: 100%;
+  }
+}
+
+.l-row {
+  display: flex;
+  padding-inline: var(--padding);
+}

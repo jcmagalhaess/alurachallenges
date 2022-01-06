@@ -1,0 +1,5 @@
+$template-name: "t-header";
+
+.#{$template-name} {
+    margin-block: calc(var(--margin)*3);
+}
