@@ -9,11 +9,14 @@ $component-name: "c-form";
     align-items: center;
     justify-content: center;
     border: none;
-    height: 60px;
-    padding-inline: var(--padding);
+    padding: var(--padding);
     transition: ease .5s;
+    color: var(--light);
     &:hover {
       background-color: rgba($color: #ffffff, $alpha: 0.26);
     }
+  }
+  input {
+    height: calc(60px - calc(var(--padding)*2));
   }
 }

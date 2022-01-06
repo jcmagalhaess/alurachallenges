@@ -1,0 +1,7 @@
+.u-mb {
+  @for $margin from 1 to 6 {
+    &--#{$margin} {
+      margin-block: $margin * 10px;
+    }
+  }
+}
