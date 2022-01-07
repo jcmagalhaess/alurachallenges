@@ -1,4 +1,4 @@
-<form class="c-form">
+<form class="c-form" [formGroup]="formHighlight">
   <div class="l-row l-row--justifyBetween">
     <div class="c-code" style="--sidebar: 350px">
       <div class="c-code__mold js-mold">
@@ -31,7 +31,7 @@
           <option value="html">HTML</option>
           <option value="css">CSS</option>
         </select>
-        <input type="color" class="c-form__color u-mb--2 js-input-color" value="#6BD1FF" onchange="inputColor()">
+        <input type="color" class="c-form__color u-mb--2 js-input-color" value="#6BD1FF" formControlName="inputColor" (change)="changeColorMold()">
       </div>
       <button type="button" class="c-button c-button--fill">Salvar projeto</button>
     </aside>

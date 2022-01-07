@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-editor',
@@ -6,11 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editor.component.scss']
 })
 export class EditorComponent implements OnInit {
+  formHighlight!: FormGroup
 
-  constructor() { }
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    console.log('editor')
+    this.formHighlight = this._formBuilder.group({
+      inputColor: ['']
+    })
+  }
+
+  changeColorMold() {
+    const inputColor = this.formHighlight.get('inputColor')?.value;
+    const moldColor = document.querySelector(".js-mold");
+    const color = "--bg-color: " + inputColor;
+
+    moldColor!.setAttribute("style", color);
   }
 
 }
