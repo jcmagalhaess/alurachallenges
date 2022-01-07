@@ -10,10 +10,12 @@
 @import "components/component/avatar/c-avatar";
 @import "components/component/menu/c-menu";
 @import "components/component/button/c-button";
+@import "components/component/editor/c-code";
+@import "components/component/badge/c-badge";
 // Templates
 @import "components/template/t-header";
 @import "components/template/t-sidebar";
-@import "components/template/t-code";
+@import "components/template/t-feed";
 // Utilities
 @import "components/utility/utility";
 // States

@@ -1,0 +1,12 @@
+$component-name: "c-badge";
+
+.#{$component-name} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: var(--margin);
+  height: 50px;
+  &__icon {
+    margin-inline-end: var(--margin);
+  }
+}

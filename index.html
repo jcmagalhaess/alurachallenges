@@ -8,6 +8,8 @@
   <title>Alura DEV</title>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+  <link rel="stylesheet" href="./assets/css/lib/highlight.css">
   <link rel="stylesheet" href="./assets/css/main.min.css">
 </head>
 
@@ -62,35 +64,23 @@
         <div class="c-menu__divider"></div>
       </nav>
     </aside>
-    <main>
+    <main class="u-mb--2">
       <form class="c-form">
         <div class="l-row l-row--justifyBetween">
-          <div class="t-code">
-            <div class="t-code__mold js-mold">
-              <div class="t-code__view">
-                <div class="t-code__actions">
-                  <span class="t-code__button--close"></span>
-                  <span class="t-code__button--minimize"></span>
-                  <span class="t-code__button--maximize"></span>
+          <div class="c-code" style="--sidebar: 350px">
+            <div class="c-code__mold js-mold">
+              <div class="c-code__view">
+                <div class="c-code__actions">
+                  <span class="c-code__button--close"></span>
+                  <span class="c-code__button--minimize"></span>
+                  <span class="c-code__button--maximize"></span>
                 </div>
-                <pre class="t-code__editor">
-                  <code contenteditable="true" aria-label="editor">
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-  const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
-  }
-  return go(f, seed, [])
-}
-                  </code>
-                </pre>
+                <div class="c-code__editor js-editor">
+                  <code class="preview hljs" contenteditable="true" aria-label="editor">function teste() {}</code>
+                </div>
               </div>
             </div>
-            <button class="c-button c-button--secondary u-mb--2">Visualizar com o highlight</button>
+            <button type="button" class="c-button c-button--secondary u-mb--2 js-hljs">Visualizar com o highlight</button>
           </div>
           <aside class="t-sidebar t-sidebar--right">
             <span>Seu projeto</span>
@@ -100,11 +90,13 @@ const unfold = (f, seed) => {
             </div>
             <span>Personalização</span>
             <div class="c-form__group u-mb--2">
-              <select class="c-form__input">
+              <select class="c-form__input js-linguagem">
                 <option value="javascript">Javascript</option>
                 <option value="python">Python</option>
                 <option value="java">Java</option>
                 <option value="php">PHP</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
               </select>
               <input type="color" class="c-form__color u-mb--2 js-input-color" value="#6BD1FF" onchange="inputColor()">
             </div>
@@ -116,5 +108,8 @@ const unfold = (f, seed) => {
   </div>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll()</script>
 <script src="assets/js/main.min.js"></script>
+
 </html>
