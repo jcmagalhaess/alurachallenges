@@ -51,8 +51,8 @@ if (botao) {
 
 const feed = document.querySelector(".js-feed-item");
 const slideDown = document.getElementsByClassName("js-slide-down");
-const width = feed.clientWidth - 48
+const width = feed ? feed.clientWidth - 48 : ''
 
-const test = Array.prototype.filter.call(slideDown, (r) => {
+Array.prototype.filter.call(slideDown, (r) => {
   r.setAttribute('style', 'width: ' + width + 'px')
 })

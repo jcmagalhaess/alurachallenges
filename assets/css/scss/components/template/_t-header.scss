@@ -7,8 +7,12 @@ $template-name: "t-header";
   }
   &__logo {
     width: 350px;
+    display: flex;
     @include breakpoint(medium-only) {
       width: 60%;
+    }
+    @include breakpoint(medium-up) {
+      width: auto;
     }
     a {
       display: flex;
@@ -18,9 +22,15 @@ $template-name: "t-header";
   &__search {
     width: calc(100% - 700px);
     @include breakpoint(medium-only) {
+      .c-form {
+        display: none;
+        width: 100%;
+        align-items: center;
+        margin-inline: 20px;
+      }
+    }
+    @include breakpoint(medium-up) {
       width: 100%;
-      display: inline-flex;
-      align-items: center;
       margin-inline: 20px;
     }
   }
@@ -36,28 +46,42 @@ $template-name: "t-header";
         display: none;
       }
     }
+    @include breakpoint(medium-up) {
+      width: auto;
+    }
+    @include breakpoint(large-only) {
+      .c-avatar {
+        display: none;
+      }
+    }
   }
   &__button {
-    display: none;
+    @include breakpoint(large-up) {
+      // display: inline-flex;
+      display: none;
+    }
     @include breakpoint(medium-only) {
       display: inline-flex;
-      padding: 0;
-      i {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-      }
-      background: none;
-      border: none;
-      border-radius: 16px;
-      font-size: 16px;
-      color: var(--light);
-      cursor: pointer;
-      &:hover {
-        background-color: rgba($color: #5081fb, $alpha: 0.16);
-      }
+    }
+    padding: 0;
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+    background: none;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    color: var(--light);
+    cursor: pointer;
+    &:hover {
+      background-color: rgba($color: #5081fb, $alpha: 0.08);
+    }
+    &:active {
+      background-color: rgba($color: #5081fb, $alpha: 0.16);
     }
   }
 }

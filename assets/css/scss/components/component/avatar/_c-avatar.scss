@@ -2,19 +2,18 @@ $component-name: "c-avatar";
 
 .#{$component-name} {
   display: flex;
-  height: 60px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-radius: 8px;
   color: var(--light);
   transition: .5s ease;
-  padding-inline: var(--padding);
+  padding: 12px;
   @include breakpoint(medium-only) {
     justify-content: flex-start;
   }
   &:hover {
     color: var(--light);
-    background-color: rgba($color: #ffffff, $alpha: 0.16);
+    background-color: rgba($color: #ffffff, $alpha: 0.08);
   }
   &__img {
     width: 32px;

@@ -17,7 +17,7 @@ $component-name: "c-form";
     transition: ease 0.5s;
     color: var(--light);
     &:hover {
-      background-color: rgba($color: #ffffff, $alpha: 0.26);
+      background-color: rgba($color: #ffffff, $alpha: 0.24);
     }
   }
   &__color {
@@ -44,7 +44,7 @@ $component-name: "c-form";
     padding-block: 20px;
     option {
       color: var(--light);
-      background-color: var(--primary);
+      background-color: var(--dark-blue);
     }
   }
 }

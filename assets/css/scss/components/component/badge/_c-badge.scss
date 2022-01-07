@@ -5,7 +5,21 @@ $component-name: "c-badge";
   align-items: center;
   justify-content: center;
   margin-inline: var(--margin);
-  height: 50px;
+  padding: 8px;
+  border-radius: 16px;
+  transition: .3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.08);
+  }
+  &:active {
+    background-color: rgba($color: #ffffff, $alpha: 0.16);
+  }
+  &--active {
+    .#{$component-name}__icon {
+      color: var(--close);
+    }
+  }
   &__icon {
     margin-inline-end: var(--margin);
   }
