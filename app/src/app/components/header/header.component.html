@@ -1,0 +1,25 @@
+<header class="t-header">
+  <div class="l-container l-container--full">
+    <div class="l-row l-row--justifyBetween l-row--verticalCenter">
+      <a href="./" class="t-header__logo">
+        <img src="./assets/img/logo.png" alt="Logo da Alura DEV">
+      </a>
+      <div class="t-header__search">
+        <form class="c-form js-search">
+          <input type="text" class="c-form__input" placeholder="Busque por algo">
+        </form>
+        <button class="t-header__button">
+          <fa-icon class="t-header__icon" [icon]="searchIcon"></fa-icon>
+        </button>
+      </div>
+      <div class="t-header__profile">
+        <app-avatar></app-avatar>
+        <button class="t-header__button" >
+          <fa-icon class="t-header__icon" [icon]="menuIcon"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<app-menu mobile="is-hidden"></app-menu>

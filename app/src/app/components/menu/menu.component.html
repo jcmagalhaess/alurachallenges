@@ -1,0 +1,24 @@
+<aside class="t-sidebar t-sidebar--left" [ngClass]="mobile">
+  <span>Menu</span>
+  <nav class="c-menu js-menu">
+    <ul class="c-menu__list">
+      <li class="c-menu__item">
+        <a [routerLink]="['editor']" class="c-menu__target" [routerLinkActive]="['c-menu__target--active']">
+          <div class="c-menu__icon">
+            <fa-icon [icon]="code"></fa-icon>
+          </div>
+          <p class="c-menu__label">Editor de código</p>
+        </a>
+      </li>
+      <li class="c-menu__item">
+        <a [routerLink]="['community']" class="c-menu__target" [routerLinkActive]="['c-menu__target--active']">
+          <div class="c-menu__icon">
+            <fa-icon [icon]="users"></fa-icon>
+          </div>
+          <p class="c-menu__label">Comunidade</p>
+        </a>
+      </li>
+    </ul>
+    <div class="c-menu__divider"></div>
+  </nav>
+</aside>
