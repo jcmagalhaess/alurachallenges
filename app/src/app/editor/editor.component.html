@@ -1,7 +1,7 @@
-<form class="c-form" [formGroup]="formHighlight">
+<form class="c-form" [formGroup]="formHighlight" (submit)="cadastrar(editor.armazenarCodigo())">
   <div class="l-row l-row--justifyBetween">
     <div class="t-editor" style="--sidebar: 350px">
-      <app-code color="{{ color.value }}" syntax="{{ syntax.value }}" #editor></app-code>
+      <app-code #editor [color]="color.value" [syntax]="syntax.value" [editable]="true"></app-code>
       <button [disabled]="formHighlight.get('syntaxHljs')?.invalid" type="button"
         class="c-button c-button--outline u-mb--2" (click)="editor.changeSyntaxCode()">Visualizar com o
         highlight</button>
@@ -21,7 +21,7 @@
         </select>
         <input type="color" class="c-form__color u-mb--2 js-input-color" formControlName="inputColor" #color>
       </div>
-      <button [disabled]="formHighlight?.invalid" type="button" class="c-button c-button--fill">Salvar projeto</button>
+      <button [disabled]="formHighlight?.invalid" type="submit" class="c-button c-button--fill">Salvar projeto</button>
     </aside>
   </div>
 </form>

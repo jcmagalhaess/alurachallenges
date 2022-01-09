@@ -6,7 +6,7 @@
       <span class="c-code__button--maximize"></span>
     </div>
     <div class="c-code__editor js-editor">
-      <code class="hljs {{ syntax }}" contenteditable="true" aria-label="editor"></code>
+      <code class="hljs {{ syntax }}" [contentEditable]="editable" aria-label="editor">{{ code }}</code>
     </div>
   </div>
 </div>

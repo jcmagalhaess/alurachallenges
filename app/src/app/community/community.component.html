@@ -1,16 +1,16 @@
 <div class="t-feed">
-  <div class="t-feed__item js-feed-item">
+  <div class="t-feed__item js-feed-item" *ngFor="let code of codes">
     <div class="t-editor">
-      <app-code color="" syntax="" #editor></app-code>
+      <app-code color="{{ code.color }}" syntax="language-{{ code.syntax }}" code="{{ code.code }}" [editable]="false"></app-code>
     </div>
     <div class="t-feed__content">
-      <h2 class="t-feed__title">Titulo do projeto</h2>
-      <p>Essa é a descrição do meu projeto</p>
+      <h2 class="t-feed__title">{{ code.title }}</h2>
+      <p>{{ code.description }}</p>
     </div>
     <div class="t-feed__interactions js-slide-down">
       <div class="t-feed__actions">
-        <app-badge></app-badge>
-        <app-badge></app-badge>
+        <app-badge [icon]="faComment" value="9"></app-badge>
+        <app-badge [icon]="faHeart" value="2" (click)="curtir(code.id)"></app-badge>
       </div>
       <div class="t-feed__author">
         <app-avatar></app-avatar>

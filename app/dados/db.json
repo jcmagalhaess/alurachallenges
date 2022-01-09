@@ -1,5 +1,28 @@
 {
-  "code": [
-
+  "codes": [
+    {
+      "title": "asd",
+      "description": "adads",
+      "color": "#9d2f2f",
+      "syntax": "javascript",
+      "code": "function() {\n\n\n}",
+      "id": 3
+    },
+    {
+      "title": "qwqe",
+      "description": "qweqeqe",
+      "color": "#99ae32",
+      "syntax": "javascript",
+      "code": "function() {\n\n\n\n\n}",
+      "id": 4
+    },
+    {
+      "title": "asd",
+      "description": "adsadad",
+      "color": "#c72929",
+      "syntax": "javascript",
+      "code": "  function() {\n\n\n}",
+      "id": 5
+    }
   ]
 }

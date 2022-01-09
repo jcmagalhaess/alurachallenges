@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-badge',
@@ -7,8 +6,9 @@ import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./badge.component.scss'],
 })
 export class BadgeComponent implements OnInit {
-  commentIcon = faComment;
-  likeIcon = faHeart;
+
+  @Input() icon!: any;
+  @Input() value!: string;
 
   constructor() {}
 

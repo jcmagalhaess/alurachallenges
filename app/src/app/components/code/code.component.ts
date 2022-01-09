@@ -7,16 +7,16 @@ import hljs from 'highlight.js/lib/common';
   styleUrls: ['./code.component.scss'],
 })
 export class CodeComponent implements OnInit {
-  hljs =  hljs.listLanguages();
+  hljs = hljs.listLanguages();
 
   @Input() color!: string;
   @Input() syntax!: string;
+  @Input() code!: string;
+  @Input() editable!: boolean;
 
   constructor() {}
 
-  ngOnInit(): void {
-    hljs.highlightAll();
-  }
+  ngOnInit(): void {}
 
   changeSyntaxCode() {
     const syntaxBlock = document.querySelector('.js-editor') as HTMLElement;
@@ -25,5 +25,12 @@ export class CodeComponent implements OnInit {
     syntaxBlock!.innerHTML = `<code class="hljs ${this.syntax}" contenteditable="true" aria-label="Editor de código"></code>`;
     syntaxBlock!.querySelector('code')!.textContent = codigo;
     hljs.highlightElement(syntaxBlock!.querySelector('code') as HTMLElement);
+  }
+
+  armazenarCodigo() {
+    const syntaxBlock = document.querySelector('.js-editor') as HTMLElement;
+    const codigo = syntaxBlock!.innerText;
+
+    return codigo;
   }
 }
