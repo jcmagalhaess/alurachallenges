@@ -1,0 +1,54 @@
+@import "./breakpoint.scss";
+
+$template-name: "c-code";
+
+.#{$template-name} {
+  &__mold {
+    padding: calc(var(--padding) * 2);
+    background-color: var(--bg-color, #6bd1ff);
+    border-radius: 8px;
+  }
+  &__view {
+    padding: var(--padding);
+    border-radius: 8px;
+  }
+  &__actions {
+    display: flex;
+    width: 65px;
+    justify-content: space-between;
+  }
+  &__button {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #eee;
+    &--close {
+      @extend .#{$template-name}__button;
+      background-color: var(--close);
+    }
+    &--minimize {
+      @extend .#{$template-name}__button;
+      background-color: var(--minimize);
+    }
+    &--maximize {
+      @extend .#{$template-name}__button;
+      background-color: var(--maximize);
+    }
+  }
+  &__editor {
+    margin: 0;
+    display: flex;
+    margin-block-start: 20px;
+    white-space: pre-wrap;
+    width: 100%;
+    min-height: 300px !important;
+    padding: 1em !important;
+    code {
+      line-height: 1.5;
+      color: var(--light);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

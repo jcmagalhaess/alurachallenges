@@ -1,3 +1,4 @@
+import { CodeModule } from './../components/code/code.module';
 import { AvatarModule } from './../components/avatar/avatar.module';
 import { BadgeModule } from './../components/badge/badge.module';
 import { MenuModule } from './../components/menu/menu.module';
@@ -12,7 +13,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
     BadgeModule,
     AvatarModule,
+    CodeModule
   ],
-  exports: [MenuModule, FontAwesomeModule, BadgeModule, AvatarModule],
+  exports: [MenuModule, FontAwesomeModule, BadgeModule, AvatarModule, CodeModule],
 })
 export class SharedModule {}

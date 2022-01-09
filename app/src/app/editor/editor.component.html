@@ -1,40 +1,25 @@
 <form class="c-form" [formGroup]="formHighlight">
   <div class="l-row l-row--justifyBetween">
-    <div class="c-code" style="--sidebar: 350px">
-      <div class="c-code__mold js-mold">
-        <div class="c-code__view">
-          <div class="c-code__actions">
-            <span class="c-code__button--close"></span>
-            <span class="c-code__button--minimize"></span>
-            <span class="c-code__button--maximize"></span>
-          </div>
-          <div class="c-code__editor js-editor">
-            <code class="preview hljs" contenteditable="true" aria-label="editor">{{'function teste() {}'}}</code>
-          </div>
-        </div>
-      </div>
-      <button [disabled]="formHighlight.get('syntaxHljs')?.invalid" type="button" class="c-button c-button--outline u-mb--2" (click)="changeSyntaxCode()">Visualizar com o
+    <div class="t-editor" style="--sidebar: 350px">
+      <app-code color="{{ color.value }}" syntax="{{ syntax.value }}" #editor></app-code>
+      <button [disabled]="formHighlight.get('syntaxHljs')?.invalid" type="button"
+        class="c-button c-button--outline u-mb--2" (click)="editor.changeSyntaxCode()">Visualizar com o
         highlight</button>
     </div>
-    <aside class="t-sidebar t-sidebar--right">
+
+    <aside class="t-sidebar t-sidebar--right" #sidebar>
       <span>Seu projeto</span>
       <div class="c-form__group u-mb--2">
         <input type="text" class="c-form__input" placeholder="Nome do seu projeto" formControlName="title">
-        <textarea class="c-form__input u-mb--2" placeholder="Descrição do seu projeto" formControlName="description" ></textarea>
+        <textarea class="c-form__input u-mb--2" placeholder="Descrição do seu projeto"
+          formControlName="description"></textarea>
       </div>
       <span>Personalização</span>
       <div class="c-form__group u-mb--2">
-        <select class="c-form__input js-linguagem" formControlName="syntaxHljs">
-          <option value="javascript">Javascript</option>
-          <option value="python">Python</option>
-          <option value="typescript">Typescript</option>
-          <option value="java">Java</option>
-          <option value="php">PHP</option>
-          <option value="html">HTML</option>
-          <option value="css">CSS</option>
+        <select class="c-form__input js-linguagem" formControlName="syntaxHljs" #syntax>
+          <option *ngFor="let language of editor.hljs" value="{{ language }}">{{ language }}</option>
         </select>
-        <input type="color" class="c-form__color u-mb--2 js-input-color" formControlName="inputColor"
-          (input)="changeColorMold()">
+        <input type="color" class="c-form__color u-mb--2 js-input-color" formControlName="inputColor" #color>
       </div>
       <button [disabled]="formHighlight?.invalid" type="button" class="c-button c-button--fill">Salvar projeto</button>
     </aside>

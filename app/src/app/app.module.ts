@@ -9,14 +9,9 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HighlightJsModule } from 'ngx-highlight-js';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    EditorComponent,
-    CommunityComponent
-  ],
+  declarations: [AppComponent, EditorComponent, CommunityComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,9 +20,8 @@ import { HighlightJsModule } from 'ngx-highlight-js';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    HighlightJsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
