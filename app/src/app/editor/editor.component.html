@@ -9,31 +9,34 @@
             <span class="c-code__button--maximize"></span>
           </div>
           <div class="c-code__editor js-editor">
-            <code class="preview hljs" contenteditable="true" aria-label="editor"></code>
+            <code class="preview hljs" contenteditable="true" aria-label="editor">{{'function teste() {}'}}</code>
           </div>
         </div>
       </div>
-      <button type="button" class="c-button c-button--outline u-mb--2 js-hljs">Visualizar com o highlight</button>
+      <button [disabled]="formHighlight.get('syntaxHljs')?.invalid" type="button" class="c-button c-button--outline u-mb--2" (click)="changeSyntaxCode()">Visualizar com o
+        highlight</button>
     </div>
     <aside class="t-sidebar t-sidebar--right">
       <span>Seu projeto</span>
       <div class="c-form__group u-mb--2">
-        <input type="text" class="c-form__input" placeholder="Nome do seu projeto">
-        <textarea class="c-form__input u-mb--2" placeholder="Descrição do seu projeto"></textarea>
+        <input type="text" class="c-form__input" placeholder="Nome do seu projeto" formControlName="title">
+        <textarea class="c-form__input u-mb--2" placeholder="Descrição do seu projeto" formControlName="description" ></textarea>
       </div>
       <span>Personalização</span>
       <div class="c-form__group u-mb--2">
-        <select class="c-form__input js-linguagem">
+        <select class="c-form__input js-linguagem" formControlName="syntaxHljs">
           <option value="javascript">Javascript</option>
           <option value="python">Python</option>
+          <option value="typescript">Typescript</option>
           <option value="java">Java</option>
           <option value="php">PHP</option>
           <option value="html">HTML</option>
           <option value="css">CSS</option>
         </select>
-        <input type="color" class="c-form__color u-mb--2 js-input-color" value="#6BD1FF" formControlName="inputColor" (change)="changeColorMold()">
+        <input type="color" class="c-form__color u-mb--2 js-input-color" formControlName="inputColor"
+          (input)="changeColorMold()">
       </div>
-      <button type="button" class="c-button c-button--fill">Salvar projeto</button>
+      <button [disabled]="formHighlight?.invalid" type="button" class="c-button c-button--fill">Salvar projeto</button>
     </aside>
   </div>
 </form>

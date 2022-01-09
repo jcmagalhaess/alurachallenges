@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighlightJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

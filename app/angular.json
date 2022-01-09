@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/highlight.js/styles/monokai-sublime.css",
               "src/styles/styles.scss"
             ],
             "scripts": []

@@ -35,4 +35,7 @@ $component-name: "c-button";
       background-color: rgba($color: #5081fb, $alpha: 0.24);
     }
   }
+  &:disabled {
+    opacity: .4;
+  }
 }
