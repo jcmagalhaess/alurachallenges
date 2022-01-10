@@ -40,10 +40,9 @@ $template-name: "c-code";
     display: flex;
     margin-block-start: 20px;
     white-space: pre-wrap;
-    width: 100%;
     min-height: 300px !important;
-    padding: 1em !important;
     code {
+      width: 100%;
       line-height: 1.5;
       color: var(--light);
       &:focus {

@@ -1,3 +1,7 @@
+import { HeaderService } from './../components/header/header.service';
+import { BadgeService } from './../components/badge/badge.service';
+import { LikeService } from './like.service';
+import { Like } from './like';
 import { Code } from './../editor/editor';
 import { CommunityService } from './community.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,33 +18,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./community.component.scss'],
 })
 export class CommunityComponent implements OnInit {
+  codes$ = this._communityService.read();
   faComment = faComment;
   faHeart = faHeart;
   codes!: Codes;
   code!: Code;
+  active = false;
+  quantVezesAlterado: number = 0;
 
   constructor(
-    private _editorService: EditorService,
-    private _communityService: CommunityService
-  ) {
-  }
+    private _communityService: CommunityService,
+    private _likeService: LikeService,
+    private _badgeService: BadgeService,
+    private _headerService: HeaderService
+  ) {}
 
   ngOnInit(): void {
-    this.listarFeed();
     hljs.highlightAll();
-  }
-
-  listarFeed() {
-    this._editorService.read().subscribe((codes: Codes) => {
-      this.codes = codes;
-    });
-  }
-
-  curtir(id: any) {
-    document.querySelector('.c-badge')?.classList.add('.c-badge--active')
-    if (event?.currentTarget) {
-    } else {
-      console.log('obrigado por curtir')
-    }
   }
 }

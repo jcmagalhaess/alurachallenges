@@ -31,6 +31,8 @@ export class CodeComponent implements OnInit {
     const syntaxBlock = document.querySelector('.js-editor') as HTMLElement;
     const codigo = syntaxBlock!.innerText;
 
+    syntaxBlock.innerHTML = `<code class="hljs ${this.syntax}" contenteditable="true" aria-label="Editor de código"></code>`;
+    syntaxBlock!.querySelector("code")!.textContent = codigo;
     return codigo;
   }
 }

@@ -1,6 +1,6 @@
-<aside class="t-sidebar t-sidebar--left" [ngClass]="mobile">
+<aside class="t-sidebar t-sidebar--left" [ngClass]="{ 'is-mobile': mobile}">
   <span>Menu</span>
-  <nav class="c-menu js-menu">
+  <nav class="c-menu" [ngClass]="{ 'is-open' : mostrarMenu }">
     <ul class="c-menu__list">
       <li class="c-menu__item">
         <a [routerLink]="['editor']" class="c-menu__target" [routerLinkActive]="['c-menu__target--active']">
@@ -19,6 +19,11 @@
         </a>
       </li>
     </ul>
-    <div class="c-menu__divider"></div>
+
+    <ng-container *ngIf="mobile">
+      <div class="c-menu__divider"></div>
+      <app-avatar></app-avatar>
+    </ng-container>
+
   </nav>
 </aside>

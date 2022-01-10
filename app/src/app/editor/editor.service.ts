@@ -15,8 +15,4 @@ export class EditorService {
   create(code: Code): Observable<Code> {
     return this._http.post<Code>(`${API}/codes/`, code);
   }
-
-  read(): Observable<Codes> {
-    return this._http.get<Codes>(`${API}/codes`)
-  }
 }

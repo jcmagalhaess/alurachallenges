@@ -14,7 +14,7 @@
       </div>
       <div class="t-header__profile">
         <app-avatar></app-avatar>
-        <button class="t-header__button" >
+        <button class="t-header__button" (click)="mobile.menuMobile()">
           <fa-icon class="t-header__icon" [icon]="menuIcon"></fa-icon>
         </button>
       </div>
@@ -22,4 +22,4 @@
   </div>
 </header>
 
-<app-menu mobile="is-hidden"></app-menu>
+<app-menu #mobile [mobile]="true"></app-menu>

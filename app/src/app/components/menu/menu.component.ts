@@ -10,8 +10,9 @@ import { HeaderService } from '../header/header.service';
 export class MenuComponent implements OnInit {
   code = faCode;
   users = faUsers;
+  mostrarMenu = false
 
-  @Input() mobile = '';
+  @Input() mobile = false;
 
   constructor() {
   }
@@ -19,6 +20,6 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {}
 
   menuMobile() {
-    console.log(this.mobile)
+    this.mostrarMenu = !this.mostrarMenu
   }
 }

@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { MenuModule } from './../menu/menu.module';
 import { AvatarModule } from './../avatar/avatar.module';
 import { NgModule } from '@angular/core';
@@ -7,7 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [HeaderComponent],
-  imports: [CommonModule, AvatarModule, FontAwesomeModule, MenuModule],
+  imports: [CommonModule, AvatarModule, FontAwesomeModule, MenuModule, ReactiveFormsModule],
   exports: [HeaderComponent],
 })
 export class HeaderModule {}

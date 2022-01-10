@@ -1,4 +1,4 @@
-<div class="t-feed">
+<div class="t-feed" *ngIf="codes$ | async as codes; else elseBlock">
   <div class="t-feed__item js-feed-item" *ngFor="let code of codes">
     <div class="t-editor">
       <app-code color="{{ code.color }}" syntax="language-{{ code.syntax }}" code="{{ code.code }}" [editable]="false"></app-code>
@@ -8,9 +8,9 @@
       <p>{{ code.description }}</p>
     </div>
     <div class="t-feed__interactions js-slide-down">
-      <div class="t-feed__actions">
-        <app-badge [icon]="faComment" value="9"></app-badge>
-        <app-badge [icon]="faHeart" value="2" (click)="curtir(code.id)"></app-badge>
+      <div class="t-feed__actions" id="teste">
+        <app-badge [icon]="faComment"></app-badge>
+        <app-badge [icon]="faHeart" #like (click)="like.curtir();"></app-badge>
       </div>
       <div class="t-feed__author">
         <app-avatar></app-avatar>
@@ -18,3 +18,7 @@
     </div>
   </div>
 </div>
+
+<ng-template #elseBlock>
+  <p>Não há dados</p>
+</ng-template>

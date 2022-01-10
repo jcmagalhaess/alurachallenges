@@ -1,28 +1,28 @@
 {
   "codes": [
     {
-      "title": "asd",
-      "description": "adads",
-      "color": "#9d2f2f",
+      "title": "Função curtir()",
+      "description": "função para curtir",
+      "color": "#e5ff61",
       "syntax": "javascript",
-      "code": "function() {\n\n\n}",
-      "id": 3
+      "code": "curtir(id: any) {\n    document.querySelector('.c-badge')?.classList.add('.c-badge--active')\n    if (event?.currentTarget) {\n    } else {\n      console.log('obrigado por curtir')\n    }\n  }",
+      "id": 6
     },
     {
-      "title": "qwqe",
-      "description": "qweqeqe",
-      "color": "#99ae32",
+      "title": "Function teste()",
+      "description": "descrição",
+      "color": "#ff9e9e",
       "syntax": "javascript",
-      "code": "function() {\n\n\n\n\n}",
-      "id": 4
+      "code": "function teste() {\n  console.log('teste');\n}",
+      "id": 7
     },
     {
-      "title": "asd",
-      "description": "adsadad",
-      "color": "#c72929",
+      "title": "teste",
+      "description": "teste",
+      "color": "#e78484",
       "syntax": "javascript",
-      "code": "  function() {\n\n\n}",
-      "id": 5
+      "code": "function teste() {\nalert();\n}",
+      "id": 8
     }
   ]
 }

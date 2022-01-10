@@ -5,6 +5,8 @@ export interface Code {
   syntax: number;
   color: string;
   code: string;
+  likes?: string;
+  count?: number
 }
 
 export type Codes = Array<Code>;

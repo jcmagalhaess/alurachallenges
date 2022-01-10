@@ -3,7 +3,7 @@
 }
 
 .is-open {
-  right: 15px;
+  right: 15px !important;
 }
 
 .is-visible {
@@ -12,4 +12,11 @@
 
 .is-hidden {
   display: none;
+}
+
+.is-mobile {
+  display: none;
+  @include breakpoint(medium-only) {
+    display: flex;
+  }
 }

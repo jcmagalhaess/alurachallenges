@@ -1,6 +1,6 @@
-<div class="c-badge">
+<div class="c-badge" [ngClass]="{ 'c-badge--active' : active }">
   <div class="c-badge__icon">
     <fa-icon [icon]="icon"></fa-icon>
   </div>
-  <span class="c-badge__value">{{ value }}</span>
+  <span class="c-badge__value">{{ count }}</span>
 </div>
