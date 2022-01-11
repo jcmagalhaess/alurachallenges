@@ -5,8 +5,8 @@
       <span class="c-code__button--minimize"></span>
       <span class="c-code__button--maximize"></span>
     </div>
-    <div class="c-code__editor js-editor">
-      <code class="hljs {{ syntax }}" [contentEditable]="editable" aria-label="editor">{{ code }}</code>
+    <div #editor class="c-code__editor">
+      <code class="hljs {{ syntax }}" [contentEditable]="editable" aria-label="Editor de Código" [innerHTML]="code"></code>
     </div>
   </div>
 </div>

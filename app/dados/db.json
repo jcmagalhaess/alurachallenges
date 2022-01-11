@@ -1,28 +1,28 @@
 {
   "codes": [
     {
-      "title": "Função curtir()",
-      "description": "função para curtir",
-      "color": "#e5ff61",
-      "syntax": "javascript",
-      "code": "curtir(id: any) {\n    document.querySelector('.c-badge')?.classList.add('.c-badge--active')\n    if (event?.currentTarget) {\n    } else {\n      console.log('obrigado por curtir')\n    }\n  }",
-      "id": 6
+      "title": "12",
+      "description": "23",
+      "color": "#c93636",
+      "syntax": "typescript",
+      "code": "<span class=\"hljs-title function_\">test</span>(<span class=\"hljs-params\">id: <span class=\"hljs-built_in\">string</span></span>) {\n  <span class=\"hljs-title function_\">alert</span>(id);\n}",
+      "id": 1
     },
     {
-      "title": "Function teste()",
-      "description": "descrição",
-      "color": "#ff9e9e",
+      "title": "asd",
+      "description": "asd",
+      "color": "#b94b4b",
       "syntax": "javascript",
-      "code": "function teste() {\n  console.log('teste');\n}",
-      "id": 7
+      "code": "<span class=\"hljs-keyword\">const</span> code =syntaxBlock!.<span class=\"hljs-title function_\">querySelector</span>(<span class=\"hljs-string\">'code'</span>);\ncode!.<span class=\"hljs-property\">textContent</span> = codigo;",
+      "id": 2
     },
     {
-      "title": "teste",
-      "description": "teste",
-      "color": "#e78484",
-      "syntax": "javascript",
-      "code": "function teste() {\nalert();\n}",
-      "id": 8
+      "title": "ViewChild()",
+      "description": "Como utilizar o decorator ViewChild()",
+      "color": "#d3d70f",
+      "syntax": "typescript",
+      "code": "<span class=\"hljs-meta\">@ViewChild</span>(<span class=\"hljs-string\">'someInput'</span>) <span class=\"hljs-attr\">someInput</span>: <span class=\"hljs-title class_\">ElementRef</span>;",
+      "id": 3
     }
   ]
 }
