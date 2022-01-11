@@ -49,5 +49,9 @@ $template-name: "c-code";
         outline: none;
       }
     }
+    &--maxHeight {
+      max-height: 300px;
+      overflow-y: scroll;
+    }
   }
 }

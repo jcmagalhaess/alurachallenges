@@ -1,0 +1,26 @@
+<div class="c-modal" [ngClass]="{ 'is-hidden' : abrirModal }">
+  <div class="c-modal__overlay" (click)="toggle()"></div>
+  <div class="c-modal__panel">
+    <div class="c-modal__editor">
+      <app-code color="{{ feed.color }}" [limitHight]="true" syntax="language-{{ feed.syntax }}" [code]="feed.code" [editable]="false"></app-code>
+    </div>
+    <div class="c-modal__informations">
+      <div class="c-modal__content">
+        <h2 class="c-modal__title">{{ feed.title }}</h2>
+        <p class="c-modal__description">{{ feed.description }}</p>
+        <div class="c-modal__comments">
+          <app-comment #comments user="Júlio" [comment]="comment"></app-comment>
+        </div>
+      </div>
+      <div class="c-modal__actions">
+        <div class="c-modal__buttons">
+          <app-badge [icon]="faComment"></app-badge>
+          <app-badge [icon]="faHeart" #like (click)="like.curtir();"></app-badge>
+        </div>
+        <form class="c-form">
+          <input class="c-form__input" type="text" #inputComment (keyup.enter)="comments.addComment(1, 'hue')">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+$component-name: "c-modal";
+
+.#{$component-name} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &__overlay {
+    position: absolute;
+    z-index: -1;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    width: 100vw;
+    height: 100vh;
+  }
+  &__panel {
+    width: 70vw;
+    display: flex;
+    background-color: var(--dark-blue);
+    border-radius: 8px;
+  }
+  &__editor {
+    width: 50%;
+  }
+  &__informations {
+    --paddingInformations: calc(var(--padding)*2);
+    width: calc(50% - var(--paddingInformations));
+    padding: var(--paddingInformations);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-block: var(--padding);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;;
+    letter-spacing: 0.4em;
+    border-bottom: 5px solid;
+    padding-block-end: var(--padding);
+  }
+  &__actions {
+    display: flex;
+    flex-flow: column;
+  }
+  &__buttons {
+    display: flex;
+  }
+}

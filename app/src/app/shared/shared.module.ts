@@ -1,3 +1,5 @@
+import { CommentModule } from './../components/comment/comment.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CodeModule } from './../components/code/code.module';
 import { AvatarModule } from './../components/avatar/avatar.module';
 import { BadgeModule } from './../components/badge/badge.module';
@@ -13,7 +15,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
     BadgeModule,
     AvatarModule,
-    CodeModule
+    CodeModule,
+    CommentModule
   ],
   exports: [MenuModule, FontAwesomeModule, BadgeModule, AvatarModule, CodeModule],
 })

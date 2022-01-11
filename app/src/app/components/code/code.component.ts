@@ -15,6 +15,7 @@ export class CodeComponent implements OnInit {
   @Input() syntax!: string;
   @Input() code!: string;
   @Input() editable!: boolean;
+  @Input() limitHight!: boolean;
 
   constructor() {}
 

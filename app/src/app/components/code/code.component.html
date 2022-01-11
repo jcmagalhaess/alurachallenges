@@ -5,7 +5,7 @@
       <span class="c-code__button--minimize"></span>
       <span class="c-code__button--maximize"></span>
     </div>
-    <div #editor class="c-code__editor">
+    <div #editor class="c-code__editor" [ngClass]="{ 'c-code__editor--maxHeight': limitHight }">
       <code class="hljs {{ syntax }}" [contentEditable]="editable" aria-label="Editor de Código" [innerHTML]="code"></code>
     </div>
   </div>
