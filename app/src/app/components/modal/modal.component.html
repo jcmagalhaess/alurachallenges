@@ -6,10 +6,10 @@
     </div>
     <div class="c-modal__informations">
       <div class="c-modal__content">
-        <h2 class="c-modal__title">{{ feed.title }}</h2>
+        <h2 class="c-modal__title">{{feed.id}} {{ feed.title }}</h2>
         <p class="c-modal__description">{{ feed.description }}</p>
         <div class="c-modal__comments">
-          <app-comment #comments user="Júlio" [comment]="comment"></app-comment>
+          <app-comment #comentar [comments]="feed.comments"></app-comment>
         </div>
       </div>
       <div class="c-modal__actions">
@@ -18,7 +18,7 @@
           <app-badge [icon]="faHeart" #like [count]="feed.countLike" [status]="feed.statusLike" (click)="like.curtir(feed.id);"></app-badge>
         </div>
         <form class="c-form">
-          <input class="c-form__input" type="text" #inputComment (keyup.enter)="comments.addComment(1, 'hue')">
+          <input class="c-form__input" type="text" #inputComment (keyup.enter)="armazenarComentario(inputComment.value)">
         </form>
       </div>
     </div>

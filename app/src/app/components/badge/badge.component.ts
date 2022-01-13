@@ -13,7 +13,7 @@ export class BadgeComponent implements OnInit {
   @Input() status!: any;
   @Output() callParent = new EventEmitter<any>();
 
-  constructor(private _badgeService: BadgeService, private _codeService: CodeService) {}
+  constructor(private _codeService: CodeService) {}
 
   ngOnInit(): void {}
 

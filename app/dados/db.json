@@ -8,8 +8,37 @@
       "code": "<span class=\"hljs-title function_\">create</span>(<span class=\"hljs-attr\">code</span>: <span class=\"hljs-title class_\">Code</span>): <span class=\"hljs-title class_\">Observable</span>&lt;<span class=\"hljs-title class_\">Code</span>&gt; {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_http</span>.<span class=\"hljs-property\">post</span>&lt;<span class=\"hljs-title class_\">Code</span>&gt;(<span class=\"hljs-string\">`<span class=\"hljs-subst\">${API}</span>/codes/`</span>, code);\n}",
       "countLike": 1,
       "statusLike": true,
-      "countComment": 0,
-      "comments": [],
+      "countComment": 7,
+      "comments": [
+        {
+          "date": "2022-01-13T19:08:50.323Z",
+          "text": "koe fdp"
+        },
+        {
+          "date": "2022-01-13T19:30:43.110Z",
+          "text": "puts,"
+        },
+        {
+          "date": "2022-01-13T19:37:19.994Z",
+          "text": "koe"
+        },
+        {
+          "date": "2022-01-13T19:38:01.520Z",
+          "text": "eae?"
+        },
+        {
+          "date": "2022-01-13T20:43:25.963Z",
+          "text": "ENTAO"
+        },
+        {
+          "date": "2022-01-13T20:43:28.987Z",
+          "text": "FICOU MASSA"
+        },
+        {
+          "date": "2022-01-13T20:43:39.964Z",
+          "text": "SÓ TEM QUE FAZER ALGUNS AJUSTES"
+        }
+      ],
       "id": 1
     },
     {
@@ -20,8 +49,25 @@
       "code": "<span class=\"hljs-punctuation\">{</span>\n  <span class=\"hljs-attr\">\"codes\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n    <span class=\"hljs-punctuation\">{</span>\n      <span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Metodo POST do HttpClient\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"description\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"enviando dados via post para o meu json\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"syntax\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"javascript\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"color\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"#f3e22b\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"&lt;span class=\\\"hljs-title function_\\\"&gt;create&lt;/span&gt;(&lt;span class=\\\"hljs-attr\\\"&gt;code&lt;/span&gt;: &lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;): &lt;span class=\\\"hljs-title class_\\\"&gt;Observable&lt;/span&gt;&amp;lt;&lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;&amp;gt; {\\n  &lt;span class=\\\"hljs-keyword\\\"&gt;return&lt;/span&gt; &lt;span class=\\\"hljs-variable language_\\\"&gt;this&lt;/span&gt;.&lt;span class=\\\"hljs-property\\\"&gt;_http&lt;/span&gt;.&lt;span class=\\\"hljs-property\\\"&gt;post&lt;/span&gt;&amp;lt;&lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;&amp;gt;(&lt;span class=\\\"hljs-string\\\"&gt;`&lt;span class=\\\"hljs-subst\\\"&gt;${API}&lt;/span&gt;/codes/`&lt;/span&gt;, code);\\n}\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"countLike\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"statusLike\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-keyword\">true</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"countComment\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">0</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"comments\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span><span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span>\n    <span class=\"hljs-punctuation\">}</span>\n  <span class=\"hljs-punctuation\">]</span>\n<span class=\"hljs-punctuation\">}</span>",
       "countLike": 1,
       "statusLike": true,
-      "countComment": 0,
-      "comments": [],
+      "countComment": 4,
+      "comments": [
+        {
+          "date": "2022-01-13T19:07:06.689Z",
+          "text": "aeeaee"
+        },
+        {
+          "date": "2022-01-13T19:08:57.036Z",
+          "text": "deu bom?"
+        },
+        {
+          "date": "2022-01-13T19:40:10.623Z",
+          "text": "f"
+        },
+        {
+          "date": "2022-01-13T19:40:15.517Z",
+          "text": "fff"
+        }
+      ],
       "id": 2
     },
     {
@@ -32,9 +78,43 @@
       "code": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal\"</span> [<span class=\"hljs-attr\">ngClass</span>]=<span class=\"hljs-string\">\"{ 'is-hidden' : abrirModal }\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__overlay\"</span> (<span class=\"hljs-attr\">click</span>)=<span class=\"hljs-string\">\"toggle()\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__panel\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__editor\"</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-code</span> <span class=\"hljs-attr\">color</span>=<span class=\"hljs-string\">\"{{ feed.color }}\"</span> [<span class=\"hljs-attr\">limitHight</span>]=<span class=\"hljs-string\">\"true\"</span> <span class=\"hljs-attr\">syntax</span>=<span class=\"hljs-string\">\"language-{{ feed.syntax }}\"</span> [<span class=\"hljs-attr\">code</span>]=<span class=\"hljs-string\">\"feed.code\"</span> [<span class=\"hljs-attr\">editable</span>]=<span class=\"hljs-string\">\"false\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-code</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__informations\"</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__content\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">h2</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__title\"</span>&gt;</span>{{ feed.title }}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">h2</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__description\"</span>&gt;</span>{{ feed.description }}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__comments\"</span>&gt;</span>\n          <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-comment</span> #<span class=\"hljs-attr\">comments</span> <span class=\"hljs-attr\">user</span>=<span class=\"hljs-string\">\"Júlio\"</span> [<span class=\"hljs-attr\">comment</span>]=<span class=\"hljs-string\">\"comment\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-comment</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__actions\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__buttons\"</span>&gt;</span>\n          <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-badge</span> [<span class=\"hljs-attr\">icon</span>]=<span class=\"hljs-string\">\"faComment\"</span> [<span class=\"hljs-attr\">count</span>]=<span class=\"hljs-string\">\"feed.countComment\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-badge</span>&gt;</span>\n          <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-badge</span> [<span class=\"hljs-attr\">icon</span>]=<span class=\"hljs-string\">\"faHeart\"</span> #<span class=\"hljs-attr\">like</span> [<span class=\"hljs-attr\">count</span>]=<span class=\"hljs-string\">\"feed.countLike\"</span> [<span class=\"hljs-attr\">status</span>]=<span class=\"hljs-string\">\"feed.statusLike\"</span> (<span class=\"hljs-attr\">click</span>)=<span class=\"hljs-string\">\"like.curtir(feed.id);\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-badge</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-form\"</span>&gt;</span>\n          <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-form__input\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"text\"</span> #<span class=\"hljs-attr\">inputComment</span> (<span class=\"hljs-attr\">keyup.enter</span>)=<span class=\"hljs-string\">\"comments.addComment(1, 'hue')\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>",
       "countLike": 0,
       "statusLike": false,
-      "countComment": 0,
-      "comments": [],
+      "countComment": 2,
+      "comments": [
+        {
+          "date": "2022-01-13T19:30:56.414Z",
+          "text": "deu bom?"
+        },
+        {
+          "date": "2022-01-13T19:40:23.470Z",
+          "text": "1"
+        }
+      ],
       "id": 3
+    },
+    {
+      "title": "asd",
+      "description": "dadads",
+      "syntax": "css",
+      "color": "#20df50",
+      "code": "<span class=\"hljs-selector-class\">.asdad</span> {\n<span class=\"hljs-attribute\">color</span>: <span class=\"hljs-number\">#eee</span>;\n\n\n}",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 3,
+      "comments": [
+        {
+          "date": "2022-01-13T19:41:42.176Z",
+          "text": "asdadada"
+        },
+        {
+          "date": "2022-01-13T19:41:42.448Z",
+          "text": "sdasd"
+        },
+        {
+          "date": "2022-01-13T19:43:05.271Z",
+          "text": "ASD"
+        }
+      ],
+      "id": 4
     }
   ]
 }

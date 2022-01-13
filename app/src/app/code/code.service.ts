@@ -28,10 +28,8 @@ export class CodeService {
     return this._http.patch<Code>(`${API}/codes/${id}/`, { countLike: count, statusLike: status });
   }
 
-  // comment(comment: ) {
-  //   return this._http.patch<Code>(`${API}/codes/${id}`, {
-  //     comment: { comment },
-  //     statusLike: status,
-  //   });
-  // }
+  readById(id: number): Observable<Codes> {
+    console.log("readById(): " + id)
+    return this._http.get<Codes>(`${API}/codes/${id}`);
+  }
 }

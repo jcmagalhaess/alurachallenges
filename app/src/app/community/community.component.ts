@@ -13,10 +13,6 @@ export class CommunityComponent implements OnInit {
   codes$ = this._communityService.read();
   faComment = faComment;
   faHeart = faHeart;
-  codes!: Codes;
-  code!: Code;
-  active = false;
-  quantVezesAlterado: number = 0;
 
   constructor(
     private _communityService: CommunityService,

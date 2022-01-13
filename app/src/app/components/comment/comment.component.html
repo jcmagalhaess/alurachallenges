@@ -1,3 +1,11 @@
-<p>
-  <em>{{ user }}: {{ comment }}</em>
-</p>
+<div *ngIf="comments">
+  <div *ngFor="let comment of comments">
+    <div class="c-comment">
+      <figure class="c-comment__avatar" style="background-image: url(assets/img/profile.jpeg);"></figure>
+      <div class="c-comment__content">
+        <span class="c-comment__period">{{ comment.date }}</span>
+        <p class="c-comment__comment">{{ comment.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>

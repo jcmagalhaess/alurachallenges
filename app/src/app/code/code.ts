@@ -1,3 +1,4 @@
+import { Comments } from './../components/comment/comment';
 export interface Code {
   id?: number;
   title: string;
@@ -8,7 +9,7 @@ export interface Code {
   countLike: number;
   statusLike: boolean;
   countComment: number;
-  comments: [];
+  comments: Comments;
 }
 
 export type Codes = Array<Code>;
