@@ -1,12 +1,14 @@
 export interface Code {
   id?: number;
   title: string;
-  description: number;
-  syntax: number;
+  description: string;
+  syntax: string;
   color: string;
   code: string;
-  likes?: string;
-  count?: number
+  countLike: number;
+  statusLike: boolean;
+  countComment: number;
+  comments: [];
 }
 
 export type Codes = Array<Code>;

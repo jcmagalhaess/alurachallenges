@@ -1,9 +1,8 @@
-import { Like } from './like';
-import { Code, Codes } from './../editor/editor';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, mapTo, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { Code, Codes } from '../code/code';
 
 const API = environment.urlAPI;
 

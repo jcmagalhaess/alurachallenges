@@ -14,8 +14,8 @@
       </div>
       <div class="c-modal__actions">
         <div class="c-modal__buttons">
-          <app-badge [icon]="faComment"></app-badge>
-          <app-badge [icon]="faHeart" #like (click)="like.curtir();"></app-badge>
+          <app-badge [icon]="faComment" [count]="feed.countComment"></app-badge>
+          <app-badge [icon]="faHeart" #like [count]="feed.countLike" [status]="feed.statusLike" (click)="like.curtir(feed.id);"></app-badge>
         </div>
         <form class="c-form">
           <input class="c-form__input" type="text" #inputComment (keyup.enter)="comments.addComment(1, 'hue')">

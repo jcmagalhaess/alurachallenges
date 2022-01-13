@@ -1,9 +1,8 @@
-import { Code } from './../editor/editor';
 import { CommunityService } from './community.service';
 import { Component, OnInit } from '@angular/core';
 import hljs from 'highlight.js/lib/common';
-import { Codes } from '../editor/editor';
 import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Code, Codes } from '../code/code';
 
 @Component({
   selector: 'app-community',

@@ -1,36 +1,34 @@
+import { CodeService } from './../../code/code.service';
 import { BadgeService } from './badge.service';
-import { LikeService } from './../../community/like.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Like } from 'src/app/community/like';
-
+import { tap } from 'rxjs';
 @Component({
   selector: 'app-badge',
   templateUrl: './badge.component.html',
   styleUrls: ['./badge.component.scss'],
 })
 export class BadgeComponent implements OnInit {
-  active = false;
-  count = 0;
-
   @Input() icon!: any;
+  @Input() count!: any;
+  @Input() status!: any;
   @Output() callParent = new EventEmitter<any>();
 
-  constructor(
-    private _likeService: LikeService,
-    private _badgeService: BadgeService
-  ) {}
+  constructor(private _badgeService: BadgeService, private _codeService: CodeService) {}
 
   ngOnInit(): void {}
 
-  curtir() {
-    if (this.active == false) {
-      this.active = !this.active;
+  curtir(id: any) {
+    if (this.status == false) {
+      this.status = !this.status;
       this.count!++;
-      this._badgeService.count(this.count);
     } else {
-      this.active = !this.active;
+      this.status = !this.status;
       this.count!--;
-      this._badgeService.count(this.count);
     }
+    console.log(id, this.count, this.status)
+    this._codeService.like(id, this.count, this.status).subscribe(
+      (res) => console.log(res),
+      (error) => console.log(error)
+    )
   }
 }

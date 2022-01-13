@@ -1,7 +1,7 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Code } from './editor';
+import { Code } from '../code/code';
 import { EditorService } from './editor.service';
 
 @Component({
@@ -27,9 +27,13 @@ export class EditorComponent implements OnInit {
     const data: Code = {
       title: this.formHighlight.get('title')?.value,
       description: this.formHighlight.get('description')?.value,
-      color: this.formHighlight.get('inputColor')?.value,
       syntax: this.formHighlight.get('syntaxHljs')?.value,
-      code: codigo
+      color: this.formHighlight.get('inputColor')?.value,
+      code: codigo,
+      countLike: 0,
+      statusLike: false,
+      countComment: 0,
+      comments: []
     }
 
     this._editorService.create(data).subscribe(
