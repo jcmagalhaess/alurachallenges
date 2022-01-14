@@ -61,7 +61,8 @@ $template-name: "c-code";
     display: flex;
     margin-block-start: 20px;
     white-space: pre-wrap;
-    height: calc(100% - calc(var(--padding)*2));
+    height: calc(96% - var(--padding) * 2);
+    overflow: scroll;
     code {
       width: 100%;
       line-height: 1.5;

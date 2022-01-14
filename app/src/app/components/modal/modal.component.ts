@@ -9,21 +9,18 @@ import { Comment } from '../comment/comment';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
 })
-export class ModalComponent {
+export class ModalComponent implements OnInit {
   faComment = faComment;
   faHeart = faHeart;
-
   abrirModal = true;
   feed!: Code;
-
   comment!: string;
 
-  countComments!: number;
-
   @ViewChild('inputComment') inputComment!: ElementRef;
-  @ViewChild('comentar') comentar!: ElementRef;
 
   constructor(private _commentService: CommentService) {}
+
+  ngOnInit(): void {}
 
   toggle() {
     this.abrirModal = !this.abrirModal;

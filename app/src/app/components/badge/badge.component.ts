@@ -21,9 +21,11 @@ export class BadgeComponent implements OnInit {
     if (this.status == false) {
       this.status = !this.status;
       this.count!++;
+      console.log(this.count, this.status)
     } else {
       this.status = !this.status;
       this.count!--;
+      console.log(this.count, this.status)
     }
     this._codeService.like(id, this.count, this.status).subscribe()
   }

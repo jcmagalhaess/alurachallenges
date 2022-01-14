@@ -2,14 +2,14 @@
   <div class="c-modal__overlay" (click)="toggle()"></div>
   <div class="c-modal__panel">
     <div class="c-modal__editor">
-      <app-code color="{{ feed.color }}" [limitHight]="true" syntax="language-{{ feed.syntax }}" [code]="feed.code" [editable]="false"></app-code>
+      <app-code color="{{ feed.color }}" [limitHight]="false" syntax="language-{{ feed.syntax }}" [code]="feed.code" [editable]="false"></app-code>
     </div>
     <div class="c-modal__informations">
       <div class="c-modal__content">
         <h2 class="c-modal__title">{{feed.id}} {{ feed.title }}</h2>
         <p class="c-modal__description">{{ feed.description }}</p>
         <div class="c-modal__comments">
-          <app-comment #comentar [comments]="feed.comments"></app-comment>
+          <app-comment [comments]="feed.comments"></app-comment>
         </div>
       </div>
       <div class="c-modal__actions">

@@ -2,8 +2,8 @@
   <div *ngFor="let comment of comments" class="c-comment">
     <figure class="c-comment__avatar" style="background-image: url(assets/img/profile.jpeg);"></figure>
     <div class="c-comment__content">
-      <span class="c-comment__period">{{ comment.date | date: 'mediumDate' }}</span>
       <p class="c-comment__comment">{{ comment.text }}</p>
+      <span class="c-comment__period">{{ comment.date | date: 'mediumDate' }}</span>
     </div>
   </div>
 </div>
