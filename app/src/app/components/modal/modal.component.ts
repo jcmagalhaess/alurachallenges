@@ -1,6 +1,6 @@
 import { CommentService } from './../comment/comment.service';
 import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { Code } from 'src/app/code/code';
 import { Comment } from '../comment/comment';
 
@@ -18,6 +18,8 @@ export class ModalComponent {
 
   comment!: string;
 
+  countComments!: number;
+
   @ViewChild('inputComment') inputComment!: ElementRef;
   @ViewChild('comentar') comentar!: ElementRef;
 
@@ -34,7 +36,9 @@ export class ModalComponent {
     };
 
     this.feed.comments.push({ date: data.date, text: data.text });
-    this._commentService.saveComment(this.feed.comments, this.feed.id as number).subscribe();
+    this._commentService
+      .saveComment(this.feed.comments, this.feed.id as number)
+      .subscribe();
     this.inputComment.nativeElement.value = '';
   }
 }

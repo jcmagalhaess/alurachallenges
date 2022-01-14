@@ -8,7 +8,7 @@
       "code": "<span class=\"hljs-title function_\">create</span>(<span class=\"hljs-attr\">code</span>: <span class=\"hljs-title class_\">Code</span>): <span class=\"hljs-title class_\">Observable</span>&lt;<span class=\"hljs-title class_\">Code</span>&gt; {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_http</span>.<span class=\"hljs-property\">post</span>&lt;<span class=\"hljs-title class_\">Code</span>&gt;(<span class=\"hljs-string\">`<span class=\"hljs-subst\">${API}</span>/codes/`</span>, code);\n}",
       "countLike": 1,
       "statusLike": true,
-      "countComment": 7,
+      "countComment": 11,
       "comments": [
         {
           "date": "2022-01-13T19:08:50.323Z",
@@ -37,6 +37,22 @@
         {
           "date": "2022-01-13T20:43:39.964Z",
           "text": "SÓ TEM QUE FAZER ALGUNS AJUSTES"
+        },
+        {
+          "date": "2022-01-14T00:57:21.044Z",
+          "text": "ue"
+        },
+        {
+          "date": "2022-01-14T00:57:47.348Z",
+          "text": "asd"
+        },
+        {
+          "date": "2022-01-14T00:58:39.573Z",
+          "text": "hue"
+        },
+        {
+          "date": "2022-01-14T00:59:08.846Z",
+          "text": "iai?"
         }
       ],
       "id": 1
@@ -115,6 +131,23 @@
         }
       ],
       "id": 4
+    },
+    {
+      "title": "teste",
+      "description": "asdasd",
+      "syntax": "scss",
+      "color": "#e042ff",
+      "code": ".#{<span class=\"hljs-variable\">$component-name</span>} {\n  <span class=\"hljs-attribute\">display</span>: flex;\n  &amp;__avatar {\n    <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">32px</span>;\n    <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">32px</span>;\n    <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">100%</span>;\n    <span class=\"hljs-attribute\">background-size</span>: cover;\n    <span class=\"hljs-attribute\">margin</span>-inline-end: var(--margin);\n  }\n}",
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 1,
+      "comments": [
+        {
+          "date": "2022-01-14T02:16:26.953Z",
+          "text": "koe"
+        }
+      ],
+      "id": 5
     }
   ]
 }

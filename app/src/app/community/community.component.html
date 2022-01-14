@@ -9,7 +9,7 @@
     </div>
     <div class="t-feed__interactions js-slide-down">
       <div class="t-feed__actions">
-        <app-badge [icon]="faComment" [count]="code.countComment" (click)="modal.toggle(); modal.feed = code"></app-badge>
+        <app-badge [icon]="faComment" [count]="code.comments.length" (click)="modal.toggle(); modal.feed = code"></app-badge>
         <app-badge [icon]="faHeart" [status]="code.statusLike" [count]="code.countLike" #like (click)="like.curtir(code.id);"></app-badge>
       </div>
       <div class="t-feed__author">
