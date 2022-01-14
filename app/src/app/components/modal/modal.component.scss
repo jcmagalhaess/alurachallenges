@@ -45,6 +45,11 @@ $component-name: "c-modal";
     border-bottom: 5px solid;
     padding-block-end: var(--padding);
   }
+  &__content {
+    height: calc(90% - var(--paddingInformations));
+    overflow-y: scroll;
+    padding-inline-end: 10px;
+  }
   &__actions {
     display: flex;
     flex-flow: column;

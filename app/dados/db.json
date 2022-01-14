@@ -152,6 +152,31 @@
         }
       ],
       "id": 5
+    },
+    {
+      "title": "new Date()",
+      "description": "dadad",
+      "syntax": "javascript",
+      "color": "#f26464",
+      "code": "<span class=\"hljs-keyword\">var</span> m_names = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Array</span>(<span class=\"hljs-string\">\"January\"</span>, <span class=\"hljs-string\">\"February\"</span>, <span class=\"hljs-string\">\"March\"</span>, \n<span class=\"hljs-string\">\"April\"</span>, <span class=\"hljs-string\">\"May\"</span>, <span class=\"hljs-string\">\"June\"</span>, <span class=\"hljs-string\">\"July\"</span>, <span class=\"hljs-string\">\"August\"</span>, <span class=\"hljs-string\">\"September\"</span>, \n<span class=\"hljs-string\">\"October\"</span>, <span class=\"hljs-string\">\"November\"</span>, <span class=\"hljs-string\">\"December\"</span>);\n\n<span class=\"hljs-keyword\">var</span> mydate = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>();\n<span class=\"hljs-keyword\">var</span> curr_date = mydate.<span class=\"hljs-title function_\">getDate</span>();\n<span class=\"hljs-keyword\">var</span> curr_month = mydate.<span class=\"hljs-title function_\">getMonth</span>();\n<span class=\"hljs-keyword\">var</span> curr_year = mydate.<span class=\"hljs-title function_\">getFullYear</span>();\n\n<span class=\"hljs-keyword\">var</span> mydatestr = <span class=\"hljs-string\">''</span> + curr_year  + <span class=\"hljs-string\">' '</span> +\ncurr_month + <span class=\"hljs-string\">' '</span> + \ncurr_date+ <span class=\"hljs-string\">' '</span> +\nmydate.<span class=\"hljs-title function_\">getHours</span>() + <span class=\"hljs-string\">':'</span> +\nmydate.<span class=\"hljs-title function_\">getMinutes</span>() + <span class=\"hljs-string\">':'</span> + \nmydate.<span class=\"hljs-title function_\">getSeconds</span>()",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 3,
+      "comments": [
+        {
+          "date": "2022-01-14T03:23:50.648Z",
+          "text": "koe"
+        },
+        {
+          "date": "2022-01-14T03:24:25.256Z",
+          "text": "bora?"
+        },
+        {
+          "date": "2022-01-14T03:26:06.843Z",
+          "text": "bora, hueheuehue"
+        }
+      ],
+      "id": 6
     }
   ]
 }
