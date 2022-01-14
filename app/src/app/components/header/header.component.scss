@@ -1,0 +1,87 @@
+@import "./breakpoint.scss";
+
+$template-name: "t-header";
+
+.#{$template-name} {
+  margin-block: calc(var(--margin) * 3);
+  .l-row {
+    flex-flow: row;
+    flex: auto;
+  }
+  &__logo {
+    width: 350px;
+    display: flex;
+    @include breakpoint(medium-only) {
+      width: 60%;
+    }
+    @include breakpoint(large-only) {
+      width: auto;
+    }
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__search {
+    width: calc(100% - 700px);
+    @include breakpoint(medium-only) {
+      width: 60%;
+      display: flex;
+      justify-content: flex-end;
+      .c-form {
+        display: none !important;
+        width: 100%;
+        align-items: center;
+        margin-inline: 20px;
+      }
+    }
+    @include breakpoint(medium-up) {
+      margin-inline: 20px;
+      .#{$template-name}__button {
+        display: none;
+      }
+    }
+  }
+  &__profile {
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    @include breakpoint(large-only) {
+      width: auto;
+      .c-avatar {
+        display: none !important;
+      }
+    }
+  }
+  &__button {
+    @include breakpoint(large-up) {
+      // display: inline-flex;
+      display: none;
+    }
+    @include breakpoint(medium-only) {
+      display: inline-flex;
+    }
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    color: var(--light);
+    cursor: pointer;
+    &:hover {
+      background-color: rgba($color: #5081fb, $alpha: 0.08);
+    }
+    &:active {
+      background-color: rgba($color: #5081fb, $alpha: 0.16);
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+}

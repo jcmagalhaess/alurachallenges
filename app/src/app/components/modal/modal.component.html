@@ -1,0 +1,25 @@
+<div class="c-modal" [ngClass]="{ 'is-hidden' : abrirModal }" *ngIf="feed">
+  <div class="c-modal__overlay" (click)="toggle()"></div>
+  <div class="c-modal__panel">
+    <div class="c-modal__editor">
+      <app-code color="{{ feed.color}}" [limitHight]="false" syntax="{{ feed.syntax }}" [code]="feed.code" [editable]="false"></app-code>
+    </div>
+    <div class="c-modal__informations">
+      <div class="c-modal__content">
+        <h2 class="c-modal__title">{{feed.id}} {{ feed.title }}</h2>
+        <p class="c-modal__description">{{ feed.description }}</p>
+        <div class="c-modal__comments">
+          <app-comment [comments]="feed.comments"></app-comment>
+        </div>
+      </div>
+      <div class="c-modal__actions">
+        <div class="c-modal__buttons">
+          <app-badge [icon]="faComment" [count]="feed.comments.length"></app-badge>
+        </div>
+        <form class="c-form u-mb--1">
+          <input class="c-form__input" type="text" #inputComment (keyup.enter)="armazenarComentario(inputComment.value)">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

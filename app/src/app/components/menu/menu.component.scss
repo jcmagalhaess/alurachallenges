@@ -1,0 +1,75 @@
+@import './breakpoint.scss';
+
+$component-name: "c-menu";
+
+.#{$component-name} {
+  transition: 0.5s ease;
+  @include breakpoint(large-only) {
+    --width: 250px;
+    position: fixed;
+    width: calc(var(--width) - calc(var(--padding) * 2));
+    height: 100vh;
+    top: 100px;
+    background-color: var(--dark-blue-gray);
+    right: calc(-1 * var(--width));
+    padding: var(--padding);
+    z-index: 99999;
+    border-radius: 8px;
+  }
+  &__divider {
+    display: none;
+    @include breakpoint(medium-only) {
+      display: flex;
+      margin-block-start: calc(var(--margin) * 2);
+      border-block-start: 1px solid var(--blue-300);
+      padding-block-start: var(--padding);
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+  }
+  &__item {
+    margin-block-end: var(--padding);
+  }
+  &__target {
+    display: flex;
+    align-items: center;
+    opacity: 0.56;
+    cursor: pointer;
+    color: var(--light);
+    &:hover {
+      opacity: 0.72;
+      color: var(--light);
+      .#{$component-name}__icon {
+        background-color: rgba($color: #5081fb, $alpha: 0.64);
+      }
+    }
+    &--active,
+    &:active {
+      opacity: 1 !important;
+      .#{$component-name}__icon {
+        background-color: var(--blue-300) !important;
+      }
+    }
+  }
+  &__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: rgba($color: #5081fb, $alpha: 0.16);
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+  }
+  &__label {
+    display: flex;
+    height: 100%;
+    padding-inline: var(--padding);
+  }
+}
