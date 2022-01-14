@@ -6,7 +6,7 @@
       </a>
       <div class="t-header__search">
         <form class="c-form js-search">
-          <input type="text" class="c-form__input" placeholder="Busque por algo">
+          <input type="text" class="c-form__input" [formControl]="postInput" placeholder="Busque por algo">
         </form>
         <button class="t-header__button">
           <fa-icon class="t-header__icon" [icon]="searchIcon"></fa-icon>

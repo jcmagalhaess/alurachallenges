@@ -1,9 +1,14 @@
-import { CommunityService } from './../../community/community.service';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  debounceTime,
+  tap,
+  filter,
+  distinctUntilChanged,
+  switchMap,
+} from 'rxjs';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
-import { debounceTime, distinctUntilChanged, filter, merge, switchMap, tap } from 'rxjs';
-import { HeaderService } from './header.service';
+import { CommunityService } from 'src/app/community/community.service';
 
 const ESPERA_DIGITACAO = 300;
 
@@ -14,9 +19,11 @@ const ESPERA_DIGITACAO = 300;
   encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent {
+  postInput = new FormControl();
   menuIcon = faBars;
   searchIcon = faSearch;
 
-  constructor() {
+  constructor(private _communityService: CommunityService) {
+    this._communityService.postInput = this.postInput;
   }
 }

@@ -8,7 +8,7 @@ $template-name: "t-feed";
   justify-content: space-between;
   &__item {
     width: calc(50% - calc(var(--margin)));
-    margin-block: calc(var(--margin)*5);
+    margin-block-end: calc(var(--margin)*2.5);
     border-radius: 8px;
     background-color: rgba($color: #000000, $alpha: 0.16);
     @include breakpoint(medium-only) {
@@ -19,10 +19,6 @@ $template-name: "t-feed";
     }
     &:hover {
       border-radius: 0;
-      .#{$template-name}__interactions {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
   }
   &__content {
@@ -45,13 +41,8 @@ $template-name: "t-feed";
     padding-block-start: 0;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    background-color: rgba($color: #000000, $alpha: 0.16);
     display: flex;
-    opacity: 0;
-    position: absolute;
     justify-content: space-between;
-    transition: .5s ease;
-    transform: translateY(-60px);
   }
   &__actions {
     display: flex;

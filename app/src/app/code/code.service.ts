@@ -28,8 +28,7 @@ export class CodeService {
     return this._http.patch<Code>(`${API}/codes/${id}/`, { countLike: count, statusLike: status });
   }
 
-  readById(id: number): Observable<Codes> {
-    console.log("readById(): " + id)
-    return this._http.get<Codes>(`${API}/codes/${id}`);
+  readById(id: number): Observable<Code> {
+    return this._http.get<Code>(`${API}/codes/${id}`);
   }
 }

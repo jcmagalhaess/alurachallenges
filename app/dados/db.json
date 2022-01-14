@@ -1,182 +1,130 @@
 {
   "codes": [
     {
-      "title": "Metodo POST do HttpClient",
-      "description": "enviando dados via post para o meu json",
-      "syntax": "javascript",
-      "color": "#f3e22b",
-      "code": "<span class=\"hljs-title function_\">create</span>(<span class=\"hljs-attr\">code</span>: <span class=\"hljs-title class_\">Code</span>): <span class=\"hljs-title class_\">Observable</span>&lt;<span class=\"hljs-title class_\">Code</span>&gt; {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_http</span>.<span class=\"hljs-property\">post</span>&lt;<span class=\"hljs-title class_\">Code</span>&gt;(<span class=\"hljs-string\">`<span class=\"hljs-subst\">${API}</span>/codes/`</span>, code);\n}",
-      "countLike": 1,
-      "statusLike": true,
-      "countComment": 11,
+      "title": "Style post component",
+      "description": "asdadd asda da",
+      "syntax": "scss",
+      "color": "#fbff00",
+      "code": "<span class=\"hljs-variable\">$template-name</span>: <span class=\"hljs-string\">\"t-feed\"</span>;\n\n\n.#{<span class=\"hljs-variable\">$template-name</span>} {\n  <span class=\"hljs-attribute\">display</span>: flex;\n  <span class=\"hljs-attribute\">flex-flow</span>: wrap;\n  <span class=\"hljs-attribute\">justify-content</span>: space-between;\n  &amp;__item {\n    <span class=\"hljs-attribute\">width</span>: calc(<span class=\"hljs-number\">50%</span> - calc(var(--margin)));\n    <span class=\"hljs-attribute\">margin</span>-block: calc(var(--margin)*<span class=\"hljs-number\">5</span>);\n    <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">8px</span>;\n    <span class=\"hljs-attribute\">background-color</span>: rgba(<span class=\"hljs-variable\">$color</span>: <span class=\"hljs-number\">#000000</span>, <span class=\"hljs-variable\">$alpha</span>: <span class=\"hljs-number\">0.16</span>);\n    <span class=\"hljs-keyword\">@include</span> breakpoint(medium-only) {\n      <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">100%</span>;\n    }\n    <span class=\"hljs-selector-class\">.c-code__editor</span> {\n      <span class=\"hljs-attribute\">overflow</span>: hidden;\n    }\n    &amp;<span class=\"hljs-selector-pseudo\">:hover</span> {\n      <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">0</span>;\n      .#{<span class=\"hljs-variable\">$template-name</span>}__interactions {\n        <span class=\"hljs-attribute\">opacity</span>: <span class=\"hljs-number\">1</span>;\n        <span class=\"hljs-attribute\">transform</span>: translateY(<span class=\"hljs-number\">0</span>);\n      }\n    }\n  }\n}",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 21,
       "comments": [
         {
-          "date": "2022-01-13T19:08:50.323Z",
-          "text": "koe fdp"
+          "date": "2022-01-14T12:53:08.199Z",
+          "text": "Ótima postagem!"
         },
         {
-          "date": "2022-01-13T19:30:43.110Z",
-          "text": "puts,"
-        },
-        {
-          "date": "2022-01-13T19:37:19.994Z",
+          "date": "2022-01-14T15:14:42.447Z",
           "text": "koe"
         },
         {
-          "date": "2022-01-13T19:38:01.520Z",
-          "text": "eae?"
+          "date": "2022-01-14T15:14:47.621Z",
+          "text": "deu bom?"
         },
         {
-          "date": "2022-01-13T20:43:25.963Z",
-          "text": "ENTAO"
+          "date": "2022-01-14T15:20:20.925Z",
+          "text": "koe"
         },
         {
-          "date": "2022-01-13T20:43:28.987Z",
-          "text": "FICOU MASSA"
+          "date": "2022-01-14T15:23:05.359Z",
+          "text": "?"
         },
         {
-          "date": "2022-01-13T20:43:39.964Z",
-          "text": "SÓ TEM QUE FAZER ALGUNS AJUSTES"
+          "date": "2022-01-14T15:24:02.691Z",
+          "text": "as"
         },
         {
-          "date": "2022-01-14T00:57:21.044Z",
-          "text": "ue"
+          "date": "2022-01-14T15:25:21.597Z",
+          "text": "as"
         },
         {
-          "date": "2022-01-14T00:57:47.348Z",
+          "date": "2022-01-14T15:25:23.934Z",
           "text": "asd"
         },
         {
-          "date": "2022-01-14T00:58:39.573Z",
-          "text": "hue"
+          "date": "2022-01-14T15:25:33.226Z",
+          "text": "asdasd"
         },
         {
-          "date": "2022-01-14T00:59:08.846Z",
-          "text": "iai?"
+          "date": "2022-01-14T15:25:34.379Z",
+          "text": "asd"
+        },
+        {
+          "date": "2022-01-14T15:25:34.894Z",
+          "text": "asd"
+        },
+        {
+          "date": "2022-01-14T15:25:35.321Z",
+          "text": "asda"
+        },
+        {
+          "date": "2022-01-14T15:25:35.676Z",
+          "text": "sda"
+        },
+        {
+          "date": "2022-01-14T15:25:35.969Z",
+          "text": "sda"
+        },
+        {
+          "date": "2022-01-14T15:25:36.254Z",
+          "text": "sda"
+        },
+        {
+          "date": "2022-01-14T15:25:36.534Z",
+          "text": "sdas"
+        },
+        {
+          "date": "2022-01-14T15:25:36.790Z",
+          "text": "ds"
+        },
+        {
+          "date": "2022-01-14T15:25:37.052Z",
+          "text": "dad"
+        },
+        {
+          "date": "2022-01-14T15:25:37.316Z",
+          "text": "as"
+        },
+        {
+          "date": "2022-01-14T15:25:38.699Z",
+          "text": "dasd"
+        },
+        {
+          "date": "2022-01-14T15:42:12.039Z",
+          "text": "koe"
         }
       ],
       "id": 1
     },
     {
-      "title": "Objeto JSON",
-      "description": "um objeto json",
-      "syntax": "json",
-      "color": "#41c844",
-      "code": "<span class=\"hljs-punctuation\">{</span>\n  <span class=\"hljs-attr\">\"codes\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n    <span class=\"hljs-punctuation\">{</span>\n      <span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Metodo POST do HttpClient\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"description\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"enviando dados via post para o meu json\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"syntax\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"javascript\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"color\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"#f3e22b\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"&lt;span class=\\\"hljs-title function_\\\"&gt;create&lt;/span&gt;(&lt;span class=\\\"hljs-attr\\\"&gt;code&lt;/span&gt;: &lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;): &lt;span class=\\\"hljs-title class_\\\"&gt;Observable&lt;/span&gt;&amp;lt;&lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;&amp;gt; {\\n  &lt;span class=\\\"hljs-keyword\\\"&gt;return&lt;/span&gt; &lt;span class=\\\"hljs-variable language_\\\"&gt;this&lt;/span&gt;.&lt;span class=\\\"hljs-property\\\"&gt;_http&lt;/span&gt;.&lt;span class=\\\"hljs-property\\\"&gt;post&lt;/span&gt;&amp;lt;&lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;&amp;gt;(&lt;span class=\\\"hljs-string\\\"&gt;`&lt;span class=\\\"hljs-subst\\\"&gt;${API}&lt;/span&gt;/codes/`&lt;/span&gt;, code);\\n}\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"countLike\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"statusLike\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-keyword\">true</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"countComment\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">0</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"comments\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span><span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span>\n    <span class=\"hljs-punctuation\">}</span>\n  <span class=\"hljs-punctuation\">]</span>\n<span class=\"hljs-punctuation\">}</span>",
-      "countLike": 0,
-      "statusLike": false,
-      "countComment": 5,
-      "comments": [
-        {
-          "date": "2022-01-13T19:07:06.689Z",
-          "text": "aeeaee"
-        },
-        {
-          "date": "2022-01-13T19:08:57.036Z",
-          "text": "deu bom?"
-        },
-        {
-          "date": "2022-01-13T19:40:10.623Z",
-          "text": "f"
-        },
-        {
-          "date": "2022-01-13T19:40:15.517Z",
-          "text": "fff"
-        },
-        {
-          "date": "2022-01-14T02:39:14.116Z",
-          "text": "asdads"
-        }
-      ],
+      "title": "Algoritmo de Trabb Pardo-Knuth",
+      "description": "Algoritmo de Trabb Pardo-Knuth",
+      "syntax": "c",
+      "color": "#ee1111",
+      "code": "<span class=\"hljs-meta\">#<span class=\"hljs-keyword\">include</span> <span class=\"hljs-string\">&lt;cmath&gt;</span></span>\n<span class=\"hljs-meta\">#<span class=\"hljs-keyword\">include</span> <span class=\"hljs-string\">&lt;iostream&gt;</span></span>\n<span class=\"hljs-meta\">#<span class=\"hljs-keyword\">include</span> <span class=\"hljs-string\">&lt;ranges&gt;</span></span>\n\nusing namespace <span class=\"hljs-built_in\">std</span>::views;\n\n<span class=\"hljs-type\">double</span> <span class=\"hljs-title function_\">f</span><span class=\"hljs-params\">(<span class=\"hljs-type\">double</span> t)</span>\n{\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">sqrt</span>(<span class=\"hljs-built_in\">abs</span>(t)) + <span class=\"hljs-number\">5</span> * <span class=\"hljs-built_in\">pow</span>(t, <span class=\"hljs-number\">3</span>);\n}\n\n<span class=\"hljs-type\">int</span> <span class=\"hljs-title function_\">main</span><span class=\"hljs-params\">()</span>\n{\n    <span class=\"hljs-type\">double</span> a[<span class=\"hljs-number\">11</span>];\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">auto</span>&amp; t : a)\n        <span class=\"hljs-built_in\">std</span>::<span class=\"hljs-built_in\">cin</span> &gt;&gt; t;\n\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-type\">int</span> i : iota(<span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">11</span>) | reverse) {\n        <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">auto</span> y = f(a[i]); y &gt; <span class=\"hljs-number\">400</span>)\n            <span class=\"hljs-built_in\">std</span>::<span class=\"hljs-built_in\">cout</span> &lt;&lt; i &lt;&lt; <span class=\"hljs-string\">\" TOO LARGE\"</span> &lt;&lt; <span class=\"hljs-built_in\">std</span>::<span class=\"hljs-built_in\">endl</span>;\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-built_in\">std</span>::<span class=\"hljs-built_in\">cout</span> &lt;&lt; i &lt;&lt; <span class=\"hljs-string\">' '</span> &lt;&lt; y &lt;&lt; <span class=\"hljs-built_in\">std</span>::<span class=\"hljs-built_in\">endl</span>;\n    }\n}",
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 0,
+      "comments": [],
       "id": 2
     },
     {
-      "title": "Estrutura para uma Modal",
-      "description": "estrutura em html para um modal parecida com a do instagram",
-      "syntax": "xml",
-      "color": "#db70f0",
-      "code": "<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal\"</span> [<span class=\"hljs-attr\">ngClass</span>]=<span class=\"hljs-string\">\"{ 'is-hidden' : abrirModal }\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__overlay\"</span> (<span class=\"hljs-attr\">click</span>)=<span class=\"hljs-string\">\"toggle()\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__panel\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__editor\"</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-code</span> <span class=\"hljs-attr\">color</span>=<span class=\"hljs-string\">\"{{ feed.color }}\"</span> [<span class=\"hljs-attr\">limitHight</span>]=<span class=\"hljs-string\">\"true\"</span> <span class=\"hljs-attr\">syntax</span>=<span class=\"hljs-string\">\"language-{{ feed.syntax }}\"</span> [<span class=\"hljs-attr\">code</span>]=<span class=\"hljs-string\">\"feed.code\"</span> [<span class=\"hljs-attr\">editable</span>]=<span class=\"hljs-string\">\"false\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-code</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__informations\"</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__content\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">h2</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__title\"</span>&gt;</span>{{ feed.title }}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">h2</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__description\"</span>&gt;</span>{{ feed.description }}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__comments\"</span>&gt;</span>\n          <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-comment</span> #<span class=\"hljs-attr\">comments</span> <span class=\"hljs-attr\">user</span>=<span class=\"hljs-string\">\"Júlio\"</span> [<span class=\"hljs-attr\">comment</span>]=<span class=\"hljs-string\">\"comment\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-comment</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__actions\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-modal__buttons\"</span>&gt;</span>\n          <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-badge</span> [<span class=\"hljs-attr\">icon</span>]=<span class=\"hljs-string\">\"faComment\"</span> [<span class=\"hljs-attr\">count</span>]=<span class=\"hljs-string\">\"feed.countComment\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-badge</span>&gt;</span>\n          <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-badge</span> [<span class=\"hljs-attr\">icon</span>]=<span class=\"hljs-string\">\"faHeart\"</span> #<span class=\"hljs-attr\">like</span> [<span class=\"hljs-attr\">count</span>]=<span class=\"hljs-string\">\"feed.countLike\"</span> [<span class=\"hljs-attr\">status</span>]=<span class=\"hljs-string\">\"feed.statusLike\"</span> (<span class=\"hljs-attr\">click</span>)=<span class=\"hljs-string\">\"like.curtir(feed.id);\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-badge</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-form\"</span>&gt;</span>\n          <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"c-form__input\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"text\"</span> #<span class=\"hljs-attr\">inputComment</span> (<span class=\"hljs-attr\">keyup.enter</span>)=<span class=\"hljs-string\">\"comments.addComment(1, 'hue')\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>",
-      "countLike": 0,
-      "statusLike": false,
-      "countComment": 2,
-      "comments": [
-        {
-          "date": "2022-01-13T19:30:56.414Z",
-          "text": "deu bom?"
-        },
-        {
-          "date": "2022-01-13T19:40:23.470Z",
-          "text": "1"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "title": "asd",
-      "description": "dadads",
-      "syntax": "css",
-      "color": "#20df50",
-      "code": "<span class=\"hljs-selector-class\">.asdad</span> {\n<span class=\"hljs-attribute\">color</span>: <span class=\"hljs-number\">#eee</span>;\n\n\n}",
-      "countLike": 0,
-      "statusLike": false,
-      "countComment": 3,
-      "comments": [
-        {
-          "date": "2022-01-13T19:41:42.176Z",
-          "text": "asdadada"
-        },
-        {
-          "date": "2022-01-13T19:41:42.448Z",
-          "text": "sdasd"
-        },
-        {
-          "date": "2022-01-13T19:43:05.271Z",
-          "text": "ASD"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "title": "teste",
-      "description": "asdasd",
-      "syntax": "scss",
-      "color": "#e042ff",
-      "code": ".#{<span class=\"hljs-variable\">$component-name</span>} {\n  <span class=\"hljs-attribute\">display</span>: flex;\n  &amp;__avatar {\n    <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">32px</span>;\n    <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">32px</span>;\n    <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">100%</span>;\n    <span class=\"hljs-attribute\">background-size</span>: cover;\n    <span class=\"hljs-attribute\">margin</span>-inline-end: var(--margin);\n  }\n}",
+      "title": "JSSS",
+      "description": "asd",
+      "syntax": "typescript",
+      "color": "#b49797",
+      "code": "<span class=\"hljs-title function_\">read</span>(<span class=\"hljs-params\">value?: <span class=\"hljs-built_in\">string</span></span>) {\n    <span class=\"hljs-keyword\">const</span> params = value ? <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">HttpParams</span>().<span class=\"hljs-title function_\">append</span>(<span class=\"hljs-string\">'valor'</span>, value) : <span class=\"hljs-literal\">undefined</span>;\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_http</span>.<span class=\"hljs-property\">get</span>&lt;<span class=\"hljs-title class_\">CodesAPI</span>&gt;(<span class=\"hljs-string\">`<span class=\"hljs-subst\">${API}</span>/codes`</span>, { params }).<span class=\"hljs-title function_\">pipe</span>(\n      <span class=\"hljs-title function_\">tap</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">valor</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(valor)),\n      <span class=\"hljs-title function_\">pluck</span>(<span class=\"hljs-string\">'payload'</span>)\n    );\n  }",
       "countLike": 1,
       "statusLike": true,
       "countComment": 1,
       "comments": [
         {
-          "date": "2022-01-14T02:16:26.953Z",
-          "text": "koe"
+          "date": "2022-01-14T15:46:01.347Z",
+          "text": "koe menor?"
         }
       ],
-      "id": 5
-    },
-    {
-      "title": "new Date()",
-      "description": "dadad",
-      "syntax": "javascript",
-      "color": "#f26464",
-      "code": "<span class=\"hljs-keyword\">var</span> m_names = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Array</span>(<span class=\"hljs-string\">\"January\"</span>, <span class=\"hljs-string\">\"February\"</span>, <span class=\"hljs-string\">\"March\"</span>, \n<span class=\"hljs-string\">\"April\"</span>, <span class=\"hljs-string\">\"May\"</span>, <span class=\"hljs-string\">\"June\"</span>, <span class=\"hljs-string\">\"July\"</span>, <span class=\"hljs-string\">\"August\"</span>, <span class=\"hljs-string\">\"September\"</span>, \n<span class=\"hljs-string\">\"October\"</span>, <span class=\"hljs-string\">\"November\"</span>, <span class=\"hljs-string\">\"December\"</span>);\n\n<span class=\"hljs-keyword\">var</span> mydate = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>();\n<span class=\"hljs-keyword\">var</span> curr_date = mydate.<span class=\"hljs-title function_\">getDate</span>();\n<span class=\"hljs-keyword\">var</span> curr_month = mydate.<span class=\"hljs-title function_\">getMonth</span>();\n<span class=\"hljs-keyword\">var</span> curr_year = mydate.<span class=\"hljs-title function_\">getFullYear</span>();\n\n<span class=\"hljs-keyword\">var</span> mydatestr = <span class=\"hljs-string\">''</span> + curr_year  + <span class=\"hljs-string\">' '</span> +\ncurr_month + <span class=\"hljs-string\">' '</span> + \ncurr_date+ <span class=\"hljs-string\">' '</span> +\nmydate.<span class=\"hljs-title function_\">getHours</span>() + <span class=\"hljs-string\">':'</span> +\nmydate.<span class=\"hljs-title function_\">getMinutes</span>() + <span class=\"hljs-string\">':'</span> + \nmydate.<span class=\"hljs-title function_\">getSeconds</span>()",
-      "countLike": 0,
-      "statusLike": false,
-      "countComment": 3,
-      "comments": [
-        {
-          "date": "2022-01-14T03:23:50.648Z",
-          "text": "koe"
-        },
-        {
-          "date": "2022-01-14T03:24:25.256Z",
-          "text": "bora?"
-        },
-        {
-          "date": "2022-01-14T03:26:06.843Z",
-          "text": "bora, hueheuehue"
-        }
-      ],
-      "id": 6
+      "id": 3
     }
   ]
 }

@@ -6,6 +6,7 @@ $template-name: "t-header";
   margin-block: calc(var(--margin) * 3);
   .l-row {
     flex-flow: row;
+    flex: auto;
   }
   &__logo {
     width: 350px;
@@ -35,7 +36,6 @@ $template-name: "t-header";
       }
     }
     @include breakpoint(medium-up) {
-      width: 100%;
       margin-inline: 20px;
       .#{$template-name}__button {
         display: none;

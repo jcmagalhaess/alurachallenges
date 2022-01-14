@@ -1,3 +1,4 @@
+import { Code } from 'src/app/code/code';
 import { CodeService } from './../../code/code.service';
 import { BadgeService } from './badge.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
@@ -9,9 +10,9 @@ import { tap } from 'rxjs';
 })
 export class BadgeComponent implements OnInit {
   @Input() icon!: any;
-  @Input() count!: any;
-  @Input() status!: any;
-  @Output() callParent = new EventEmitter<any>();
+  @Input() count = 0;
+  @Input() status = false;
+
 
   constructor(private _codeService: CodeService) {}
 

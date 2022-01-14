@@ -10,7 +10,7 @@
     <div class="t-feed__interactions js-slide-down">
       <div class="t-feed__actions">
         <app-badge [icon]="faComment" [count]="code.comments.length" (click)="modal.toggle(); modal.feed = code;"></app-badge>
-        <app-badge [icon]="faHeart" [status]="code.statusLike" [count]="code.countLike" #like (click)="like.curtir(code.id);"></app-badge>
+        <app-badge [icon]="faHeart" #like [status]="code.statusLike" [count]="code.countLike" (click)="like.curtir(code.id);"></app-badge>
       </div>
       <div class="t-feed__author">
         <app-avatar></app-avatar>
@@ -22,6 +22,6 @@
 <app-modal #modal></app-modal>
 
 <ng-template #elseBlock>
-  <p>Não há dados</p>
+  <em>Não há dados</em>
 </ng-template>
 
