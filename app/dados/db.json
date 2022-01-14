@@ -6,9 +6,9 @@
       "syntax": "scss",
       "color": "#fbff00",
       "code": "<span class=\"hljs-variable\">$template-name</span>: <span class=\"hljs-string\">\"t-feed\"</span>;\n\n\n.#{<span class=\"hljs-variable\">$template-name</span>} {\n  <span class=\"hljs-attribute\">display</span>: flex;\n  <span class=\"hljs-attribute\">flex-flow</span>: wrap;\n  <span class=\"hljs-attribute\">justify-content</span>: space-between;\n  &amp;__item {\n    <span class=\"hljs-attribute\">width</span>: calc(<span class=\"hljs-number\">50%</span> - calc(var(--margin)));\n    <span class=\"hljs-attribute\">margin</span>-block: calc(var(--margin)*<span class=\"hljs-number\">5</span>);\n    <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">8px</span>;\n    <span class=\"hljs-attribute\">background-color</span>: rgba(<span class=\"hljs-variable\">$color</span>: <span class=\"hljs-number\">#000000</span>, <span class=\"hljs-variable\">$alpha</span>: <span class=\"hljs-number\">0.16</span>);\n    <span class=\"hljs-keyword\">@include</span> breakpoint(medium-only) {\n      <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">100%</span>;\n    }\n    <span class=\"hljs-selector-class\">.c-code__editor</span> {\n      <span class=\"hljs-attribute\">overflow</span>: hidden;\n    }\n    &amp;<span class=\"hljs-selector-pseudo\">:hover</span> {\n      <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">0</span>;\n      .#{<span class=\"hljs-variable\">$template-name</span>}__interactions {\n        <span class=\"hljs-attribute\">opacity</span>: <span class=\"hljs-number\">1</span>;\n        <span class=\"hljs-attribute\">transform</span>: translateY(<span class=\"hljs-number\">0</span>);\n      }\n    }\n  }\n}",
-      "countLike": 0,
-      "statusLike": false,
-      "countComment": 21,
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 23,
       "comments": [
         {
           "date": "2022-01-14T12:53:08.199Z",
@@ -93,6 +93,14 @@
         {
           "date": "2022-01-14T15:42:12.039Z",
           "text": "koe"
+        },
+        {
+          "date": "2022-01-14T18:06:45.523Z",
+          "text": "comentario"
+        },
+        {
+          "date": "2022-01-14T18:07:01.551Z",
+          "text": "teste"
         }
       ],
       "id": 1

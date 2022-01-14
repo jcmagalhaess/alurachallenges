@@ -1,6 +1,6 @@
 import { environment } from './../../environments/environment.prod';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Observable, tap } from 'rxjs';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Code, Codes } from './code';
 
@@ -16,8 +16,11 @@ export class CodeService {
     return this._http.post<Code>(`${API}/codes/`, code);
   }
 
-  read(): Observable<Codes> {
-    return this._http.get<Codes>(`${API}/codes/`);
+  read(valor?: string): Observable<Codes> {
+    const params = valor ? new HttpParams().append('q', valor) : undefined;
+    return this._http.get<Codes>(`${API}/codes/`, { params }).pipe(
+      tap((valor) => console.log(valor))
+    );
   }
 
   update(id: Code, code: Code): Observable<Code> {

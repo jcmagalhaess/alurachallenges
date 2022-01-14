@@ -1,4 +1,6 @@
 import { Comments } from './../components/comment/comment';
+export interface Codes extends Array<Code> {}
+
 export interface Code {
   id?: number;
   title: string;
@@ -12,4 +14,6 @@ export interface Code {
   comments: Comments;
 }
 
-export type Codes = Array<Code>;
+export interface CodesApi {
+  payload: Codes;
+}
