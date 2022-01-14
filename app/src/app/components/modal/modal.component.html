@@ -15,7 +15,7 @@
       <div class="c-modal__actions">
         <div class="c-modal__buttons">
           <app-badge [icon]="faComment" [count]="feed.comments.length"></app-badge>
-          <app-badge [icon]="faHeart" #like [count]="feed.countLike" [status]="feed.statusLike" (click)="like.curtir(feed.id);"></app-badge>
+          <app-badge [icon]="faHeart" [status]="feed.statusLike" [count]="feed.countLike" #like (click)="like.curtir(feed.id);"></app-badge>
         </div>
         <form class="c-form">
           <input class="c-form__input" type="text" #inputComment (keyup.enter)="armazenarComentario(inputComment.value)">

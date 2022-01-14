@@ -65,7 +65,7 @@
       "code": "<span class=\"hljs-punctuation\">{</span>\n  <span class=\"hljs-attr\">\"codes\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n    <span class=\"hljs-punctuation\">{</span>\n      <span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Metodo POST do HttpClient\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"description\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"enviando dados via post para o meu json\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"syntax\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"javascript\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"color\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"#f3e22b\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"&lt;span class=\\\"hljs-title function_\\\"&gt;create&lt;/span&gt;(&lt;span class=\\\"hljs-attr\\\"&gt;code&lt;/span&gt;: &lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;): &lt;span class=\\\"hljs-title class_\\\"&gt;Observable&lt;/span&gt;&amp;lt;&lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;&amp;gt; {\\n  &lt;span class=\\\"hljs-keyword\\\"&gt;return&lt;/span&gt; &lt;span class=\\\"hljs-variable language_\\\"&gt;this&lt;/span&gt;.&lt;span class=\\\"hljs-property\\\"&gt;_http&lt;/span&gt;.&lt;span class=\\\"hljs-property\\\"&gt;post&lt;/span&gt;&amp;lt;&lt;span class=\\\"hljs-title class_\\\"&gt;Code&lt;/span&gt;&amp;gt;(&lt;span class=\\\"hljs-string\\\"&gt;`&lt;span class=\\\"hljs-subst\\\"&gt;${API}&lt;/span&gt;/codes/`&lt;/span&gt;, code);\\n}\"</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"countLike\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"statusLike\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-keyword\">true</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"countComment\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">0</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"comments\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span><span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span>\n    <span class=\"hljs-punctuation\">}</span>\n  <span class=\"hljs-punctuation\">]</span>\n<span class=\"hljs-punctuation\">}</span>",
       "countLike": 1,
       "statusLike": true,
-      "countComment": 4,
+      "countComment": 5,
       "comments": [
         {
           "date": "2022-01-13T19:07:06.689Z",
@@ -82,6 +82,10 @@
         {
           "date": "2022-01-13T19:40:15.517Z",
           "text": "fff"
+        },
+        {
+          "date": "2022-01-14T02:39:14.116Z",
+          "text": "asdads"
         }
       ],
       "id": 2
