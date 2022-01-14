@@ -14,6 +14,25 @@ $template-name: "c-code";
     border-radius: 8px;
     height: calc(100% - calc(var(--padding) * 2));
   }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__tag {
+    padding-inline: 15px;
+    padding-block: 5px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--dark);
+    border: 1px solid transparent;
+    transition: .3s ease;
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+  }
   &__actions {
     display: flex;
     width: 65px;
@@ -52,8 +71,8 @@ $template-name: "c-code";
       }
     }
     &--maxHeight {
-      max-height: 300px;
-      overflow-y: scroll;
+      height: 300px;
+      overflow: hidden;
     }
   }
 }

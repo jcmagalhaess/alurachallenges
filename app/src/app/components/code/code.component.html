@@ -1,12 +1,15 @@
 <div class="c-code__mold js-mold" style="--bg-color: {{ color }}">
   <div class="c-code__view hljs">
-    <div class="c-code__actions">
-      <span class="c-code__button--close"></span>
-      <span class="c-code__button--minimize"></span>
-      <span class="c-code__button--maximize"></span>
+    <div class="c-code__heading">
+      <div class="c-code__actions">
+        <span class="c-code__button--close"></span>
+        <span class="c-code__button--minimize"></span>
+        <span class="c-code__button--maximize"></span>
+      </div>
+      <span class="c-code__tag" style="--bg-color: {{ color }}">{{ syntax }}</span>
     </div>
     <div #editor class="c-code__editor" [ngClass]="{ 'c-code__editor--maxHeight': limitHight }">
-      <code class="hljs {{ syntax }}" [contentEditable]="editable" aria-label="Editor de Código" [innerHTML]="code"></code>
+      <code class="hljs language-{{ syntax }}" [contentEditable]="editable" aria-label="Editor de Código" [innerHTML]="code"></code>
     </div>
   </div>
 </div>
