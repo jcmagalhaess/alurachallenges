@@ -9,6 +9,9 @@ $template-name: "t-feed";
       display: inline-block;
       column-count: 3;
       column-gap: var(--padding);
+      @include breakpoint(large-only) {
+        column-count: 2;
+      }
       @include breakpoint(medium-only) {
         column-count: 1;
       }

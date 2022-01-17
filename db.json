@@ -50,6 +50,18 @@
         }
       ],
       "id": 3
+    },
+    {
+      "title": "Teste JSON",
+      "description": "TESTE",
+      "syntax": "json",
+      "color": "#f8a10d",
+      "code": "<span class=\"hljs-punctuation\">{</span>\n  <span class=\"hljs-attr\">\"posts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n    <span class=\"hljs-punctuation\">{</span>\n      <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"hello\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n  <span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n  <span class=\"hljs-attr\">\"profile\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"typicode\"</span>\n  <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 0,
+      "comments": [],
+      "id": 4
     }
   ]
 }
