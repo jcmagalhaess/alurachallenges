@@ -35,7 +35,14 @@ O projeto foi desenvolvido com os seguinte recursos:
 
 ## Visualização o projeto
 
-[Alura Dev - Challenge Fron-End 2021](https://aluradev-jcmagalhaess.vercel.app/)
+[Alura Dev - Challenge Fron-End 2021](https://aluradev-challengens.vercel.app/editor)
+
+## Para rodar o projeto!
+
+1. **git clone https://github.com/jcmagalhaess/alurachallenges.git** para clonar o repositório em sua maquina.
+2. **npm install** para fazer o download dos pacotes do projeto.
+3. Para rodar o servidor _json-server_ insira **json-server --watch db.json** em seu terminal.
+3. Em seguida rode **npm start** para rodar a aplicação.
 
 ## 😀 Manda um salve no meu linkedin!
 

@@ -74,6 +74,35 @@
       "countComment": 0,
       "comments": [],
       "id": 5
+    },
+    {
+      "title": "Breakpoint para media query",
+      "description": "Função para responsividade de seus projetos",
+      "syntax": "scss",
+      "color": "#df3a3a",
+      "code": "<span class=\"hljs-keyword\">@mixin</span> breakpoint(<span class=\"hljs-variable\">$point</span>) {\n  <span class=\"hljs-keyword\">@if</span> <span class=\"hljs-variable\">$point</span> == small-only {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">max-width</span>: <span class=\"hljs-number\">37.4375em</span>) {\n      <span class=\"hljs-comment\">// 599px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == small-up {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">37.5em</span>) {\n      <span class=\"hljs-comment\">// 600px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == medium-only {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">max-width</span>: <span class=\"hljs-number\">56.1875em</span>) {\n      <span class=\"hljs-comment\">// 899px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == medium-up {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">56.25em</span>) {\n      <span class=\"hljs-comment\">// 900px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == large-only {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">max-width</span>: <span class=\"hljs-number\">74.9375em</span>) {\n      <span class=\"hljs-comment\">// 1199px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == large-up {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">75em</span>) {\n      <span class=\"hljs-comment\">// 1200px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">min-width</span>: ((<span class=\"hljs-variable\">$point</span> / <span class=\"hljs-number\">16</span>) * <span class=\"hljs-number\">1em</span>)) {\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  }\n}\n\n",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 0,
+      "comments": [],
+      "id": 6
+    },
+    {
+      "title": "Alert function",
+      "description": "asddasd",
+      "syntax": "javascript",
+      "color": "#ebee20",
+      "code": "<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">'Sua caixa de alerta'</span>)\n}",
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 1,
+      "comments": [
+        {
+          "date": "2022-01-17T17:45:24.203Z",
+          "text": "comentarios"
+        }
+      ],
+      "id": 7
     }
   ]
 }
