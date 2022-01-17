@@ -2,7 +2,7 @@ import { CommunityService } from 'src/app/community/community.service';
 import { CodeService } from './../code/code.service';
 import { Component, OnInit } from '@angular/core';
 import hljs from 'highlight.js/lib/common';
-import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faBorderAll, faComment, faHeart, faStream } from '@fortawesome/free-solid-svg-icons';
 import { debounceTime, distinctUntilChanged, filter, merge, switchMap, tap } from 'rxjs';
 
 const ESPERA_DIGITACAO = 300;
@@ -33,8 +33,12 @@ export class CommunityComponent implements OnInit {
 
   codes$ = merge(this.todosCodes$, this.filtroPeloInput$)
 
+  faMasonry = faStream;
+  faRegular = faBorderAll
   faComment = faComment;
   faHeart = faHeart;
+
+  structure = false
 
 
   constructor(
@@ -44,5 +48,10 @@ export class CommunityComponent implements OnInit {
 
   ngOnInit(): void {
     hljs.highlightAll();
+  }
+
+  toggleStructre() {
+    this.structure = !this.structure
+    console.log(this.structure)
   }
 }

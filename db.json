@@ -16,6 +16,40 @@
         }
       ],
       "id": 1
+    },
+    {
+      "title": "NgModule - Angular JS",
+      "description": "descrição",
+      "syntax": "typescript",
+      "color": "#f8bfbf",
+      "code": "<span class=\"hljs-meta\">@NgModule</span>({\n  <span class=\"hljs-attr\">declarations</span>: [<span class=\"hljs-title class_\">BadgeComponent</span>],\n  <span class=\"hljs-attr\">imports</span>: [<span class=\"hljs-title class_\">CommonModule</span>, <span class=\"hljs-title class_\">FontAwesomeModule</span>],\n  <span class=\"hljs-attr\">exports</span>: [<span class=\"hljs-title class_\">BadgeComponent</span>],\n})\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">BadgeModule</span> {}",
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 1,
+      "comments": [
+        {
+          "date": "2022-01-17T17:00:28.400Z",
+          "text": "Nice!"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "title": "index.html projeto Angular",
+      "description": "descrição",
+      "syntax": "xml",
+      "color": "#abf53d",
+      "code": "<span class=\"hljs-meta\">&lt;!doctype <span class=\"hljs-keyword\">html</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">html</span> <span class=\"hljs-attr\">lang</span>=<span class=\"hljs-string\">\"pt-Br\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">head</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">charset</span>=<span class=\"hljs-string\">\"utf-8\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">title</span>&gt;</span>App<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">title</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">base</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">\"/\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"viewport\"</span> <span class=\"hljs-attr\">content</span>=<span class=\"hljs-string\">\"width=device-width, initial-scale=1\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">\"icon\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"image/x-icon\"</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">\"favicon.ico\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">head</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">body</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">app-root</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">app-root</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">body</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">html</span>&gt;</span>\n\n",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 1,
+      "comments": [
+        {
+          "date": "2022-01-17T17:00:38.460Z",
+          "text": "Niceeee!"
+        }
+      ],
+      "id": 3
     }
   ]
 }

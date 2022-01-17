@@ -1,19 +1,35 @@
-<div class="t-feed" *ngIf="codes$ | async as codes; else elseBlock" [ngClass]="{ 't-feed--mansory': false }">
-  <div class="t-feed__item" *ngFor="let code of codes">
-    <div class="t-editor">
-      <app-code color="{{ code.color }}" #editor [limitHight]="false" syntax="{{ code.syntax }}" [code]="code.code" [editable]="false"></app-code>
-    </div>
-    <div class="t-feed__content">
-      <h2 class="t-feed__title">{{ code.title }}</h2>
-      <p>{{ code.description }}</p>
-    </div>
-    <div class="t-feed__interactions js-slide-down">
-      <div class="t-feed__actions">
-        <app-badge [icon]="faComment" [count]="code.comments.length" (click)="modal.toggle(); modal.feed = code;"></app-badge>
-        <app-badge [icon]="faHeart" #like [status]="code.statusLike" [count]="code.countLike" (click)="like.curtir(code.id);"></app-badge>
+
+
+
+<div class="t-feed" *ngIf="codes$ | async as codes; else elseBlock" [ngClass]="{ 't-feed--masonry': structure }">
+  <div class="t-feed__buttons">
+    <button class="t-feed__button" (click)="toggleStructre()" *ngIf="!structure">
+      <fa-icon class="t-feed__icon" [icon]="faMasonry"></fa-icon>
+    </button>
+    <button class="t-feed__button" (click)="toggleStructre()" *ngIf="structure">
+      <fa-icon class="t-feed__icon" [icon]="faRegular"></fa-icon>
+    </button>
+  </div>
+  <div class="t-feed__list">
+    <div class="t-feed__item" *ngFor="let code of codes">
+      <div class="t-editor">
+        <app-code color="{{ code.color }}" #editor [limitHight]="true" syntax="{{ code.syntax }}" [code]="code.code"
+          [editable]="false"></app-code>
       </div>
-      <div class="t-feed__author">
-        <app-avatar></app-avatar>
+      <div class="t-feed__content">
+        <h2 class="t-feed__title">{{ code.title }}</h2>
+        <p>{{ code.description }}</p>
+      </div>
+      <div class="t-feed__interactions js-slide-down">
+        <div class="t-feed__actions">
+          <app-badge [icon]="faComment" [count]="code.comments.length" (click)="modal.toggle(); modal.feed = code;">
+          </app-badge>
+          <app-badge [icon]="faHeart" #like [status]="code.statusLike" [count]="code.countLike"
+            (click)="like.curtir(code.id);"></app-badge>
+        </div>
+        <div class="t-feed__author">
+          <app-avatar></app-avatar>
+        </div>
       </div>
     </div>
   </div>
@@ -24,4 +40,3 @@
 <ng-template #elseBlock>
   <em>Não há dados</em>
 </ng-template>
-
