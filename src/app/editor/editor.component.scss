@@ -1,8 +1,0 @@
-@import './breakpoint.scss';
-
-.t-editor {
-  width: calc(100% - var(--sidebar, 0px));
-  @include breakpoint(medium-only) {
-    width: auto;
-  }
-}
