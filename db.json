@@ -62,6 +62,18 @@
       "countComment": 0,
       "comments": [],
       "id": 4
+    },
+    {
+      "title": "as",
+      "description": "dasda",
+      "syntax": "javascript",
+      "color": "#fddf1c",
+      "code": "<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) {\n\n\n\n\n}",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 0,
+      "comments": [],
+      "id": 5
     }
   ]
 }
