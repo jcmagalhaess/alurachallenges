@@ -1,3 +1,21 @@
 {
-  "codes": []
+  "codes": [
+    {
+      "title": "Simulando um JSON SERVER",
+      "description": "Estrutura de um json, usada como um db",
+      "syntax": "json",
+      "color": "#46b7dd",
+      "code": "<span class=\"hljs-punctuation\">{</span>\n  <span class=\"hljs-attr\">\"posts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n    <span class=\"hljs-punctuation\">{</span>\n      <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"hello\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n  <span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n  <span class=\"hljs-attr\">\"profile\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"typicode\"</span>\n  <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 1,
+      "comments": [
+        {
+          "date": "2022-01-17T14:24:23.484Z",
+          "text": "json é muito foda!"
+        }
+      ],
+      "id": 1
+    }
+  ]
 }
