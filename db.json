@@ -133,11 +133,27 @@
       "code": "<span class=\"hljs-title function_\">read</span>(<span class=\"hljs-params\">value?: <span class=\"hljs-built_in\">string</span></span>) {\n    <span class=\"hljs-keyword\">const</span> params = value ? <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">HttpParams</span>().<span class=\"hljs-title function_\">append</span>(<span class=\"hljs-string\">'valor'</span>, value) : <span class=\"hljs-literal\">undefined</span>;\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_http</span>.<span class=\"hljs-property\">get</span>&lt;<span class=\"hljs-title class_\">CodesAPI</span>&gt;(<span class=\"hljs-string\">`<span class=\"hljs-subst\">${API}</span>/codes`</span>, { params }).<span class=\"hljs-title function_\">pipe</span>(\n      <span class=\"hljs-title function_\">tap</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">valor</span>) =&gt;</span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(valor)),\n      <span class=\"hljs-title function_\">pluck</span>(<span class=\"hljs-string\">'payload'</span>)\n    );\n  }",
       "countLike": 1,
       "statusLike": true,
-      "countComment": 1,
+      "countComment": 5,
       "comments": [
         {
           "date": "2022-01-14T15:46:01.347Z",
           "text": "koe menor?"
+        },
+        {
+          "date": "2022-01-17T13:59:38.047Z",
+          "text": "asadsa"
+        },
+        {
+          "date": "2022-01-17T13:59:38.316Z",
+          "text": "da"
+        },
+        {
+          "date": "2022-01-17T13:59:38.636Z",
+          "text": "sda"
+        },
+        {
+          "date": "2022-01-17T13:59:38.940Z",
+          "text": "d"
         }
       ],
       "id": 3
