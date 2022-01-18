@@ -17,3 +17,7 @@
   --select-focus: blue;
   --select-arrow: var(--select-border);
 }
+
+:focus, :focus-visible {
+  outline: none !important;
+}

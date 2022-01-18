@@ -37,12 +37,14 @@ O projeto foi desenvolvido com os seguinte recursos:
 
 [Alura Dev - Challenge Fron-End 2021](https://aluradev-challengens.vercel.app/editor)
 
-## Para rodar o projeto!
+## Rodar projeto!
+
+**Em seu terminal favorito faça os seguintes passos:
 
 1. **git clone https://github.com/jcmagalhaess/alurachallenges.git** para clonar o repositório em sua maquina.
 2. **npm install** para fazer o download dos pacotes do projeto.
-3. Para rodar o servidor _json-server_ insira **json-server --watch db.json** em seu terminal. Navegue para `http://localhost:3000/codes/` para visualizar.
-3. Em seguida insira **npm start** para rodar a aplicação. Aplicação irá abrir automaticamente em `http://localhost:4200/`.
+3. **npm run server** para rodar o servidor __json-server__. Navegue para `http://localhost:3000/codes/` para visualizar.
+3. **npm start** para rodar a aplicação. Navegue para `http://localhost:4200/` para visualizar.
 
 ## 😀 Manda um salve no meu linkedin!
 

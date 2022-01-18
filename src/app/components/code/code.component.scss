@@ -67,9 +67,6 @@ $template-name: "c-code";
       width: 100%;
       line-height: 1.5;
       color: var(--light);
-      &:focus {
-        outline: none;
-      }
     }
     &--maxHeight {
       height: 300px;
