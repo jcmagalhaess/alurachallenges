@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  urlAPI: 'https://jsonplaceholder.typicode.com/jcmagalhaes/alurachallenges/codes',
+  urlAPI: 'https://my-json-server.typicode.com/jcmagalhaess/alurachallenges',
 };
