@@ -38,9 +38,10 @@ O projeto foi desenvolvido com os seguinte recursos:
 **Em seu terminal favorito faça os seguintes passos:**
 
 1. **git clone https://github.com/jcmagalhaess/alurachallenges.git** para clonar o repositório em sua maquina.
-2. **npm install** para fazer o download dos pacotes do projeto.
-3. **npm run server** para rodar o servidor __json-server__. Navegue para `http://localhost:3000/codes/` para visualizar.
-3. **npm start** para rodar a aplicação. Navegue para `http://localhost:4200/` para visualizar.
+2. **cd alurachallenges** para entrar no repositorio clonado. 
+3. **npm install** para fazer o download dos pacotes do projeto.
+4. **npm run server** para rodar o servidor __json-server__. Navegue para `http://localhost:3000/codes/` para visualizar.
+5. Abra outro terminal entre na pasta clonada e digite **npm start** para rodar a aplicação. Navegue para `http://localhost:4200/` para visualizar.
 
 ## 😀 Manda um salve no meu linkedin!
 
