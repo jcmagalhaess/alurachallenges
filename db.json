@@ -1,3 +1,21 @@
 {
-  "codes": []
+  "codes": [
+    {
+      "title": "alert",
+      "description": "teste",
+      "syntax": "javascript",
+      "color": "#e28888",
+      "code": "<span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">''</span>);\n\n",
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 1,
+      "comments": [
+        {
+          "date": "2022-01-18T16:32:36.848Z",
+          "text": "koe"
+        }
+      ],
+      "id": 1
+    }
+  ]
 }

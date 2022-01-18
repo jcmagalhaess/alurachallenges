@@ -1,6 +1,3 @@
-
-
-
 <div class="t-feed" *ngIf="codes$ | async as codes; else elseBlock" [ngClass]="{ 't-feed--masonry': structure }">
   <div class="t-feed__buttons">
     <button class="t-feed__button" (click)="toggleStructre()" *ngIf="!structure">
