@@ -33,10 +33,6 @@ O projeto foi desenvolvido com os seguinte recursos:
 * Opção de like e deslike nas postagens;
 * Método de filtro usando o metódo .filter() da biblioteca RXJS
 
-## Visualização o projeto
-
-[Alura Dev - Challenge Fron-End 2021](https://aluradev-challengens.vercel.app/editor)
-
 ## Rodar projeto!
 
 **Em seu terminal favorito faça os seguintes passos:
