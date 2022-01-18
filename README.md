@@ -35,7 +35,7 @@ O projeto foi desenvolvido com os seguinte recursos:
 
 ## Rodar projeto!
 
-**Em seu terminal favorito faça os seguintes passos:
+**Em seu terminal favorito faça os seguintes passos:**
 
 1. **git clone https://github.com/jcmagalhaess/alurachallenges.git** para clonar o repositório em sua maquina.
 2. **npm install** para fazer o download dos pacotes do projeto.
