@@ -163,6 +163,44 @@
         }
       ],
       "id": 10
+    },
+    {
+      "title": "teste",
+      "description": "asd",
+      "syntax": "javascript",
+      "color": "#fe0b0b",
+      "code": "<span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">'test'</span>);\n}",
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 2,
+      "comments": [
+        {
+          "date": "2022-01-17T20:39:17.911Z",
+          "text": "koe menor"
+        },
+        {
+          "date": "2022-01-17T20:39:20.214Z",
+          "text": "humilde"
+        }
+      ],
+      "id": 11
+    },
+    {
+      "title": "Reset de estilos globais",
+      "description": "Resetando formatações globais das tags do projeto",
+      "syntax": "css",
+      "color": "#c6ed35",
+      "code": "* {\n  <span class=\"hljs-attribute\">margin</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">1rem</span>;\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-number\">#333</span>;\n}",
+      "countLike": 1,
+      "statusLike": true,
+      "countComment": 1,
+      "comments": [
+        {
+          "date": "2022-01-17T20:45:09.197Z",
+          "text": "Muito util, obg"
+        }
+      ],
+      "id": 12
     }
   ]
 }
