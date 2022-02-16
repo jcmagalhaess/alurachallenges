@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Code } from '../code/code';
 import { FormControl } from '@angular/forms';
 
-const API = environment.urlAPI;
+const API = environment.api;
 
 @Injectable({
   providedIn: 'root',

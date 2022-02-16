@@ -8,7 +8,7 @@
       "code": "<span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">'teste'</span>);",
       "countLike": 1,
       "statusLike": true,
-      "countComment": 2,
+      "countComment": 5,
       "comments": [
         {
           "date": "2022-01-18T17:11:11.344Z",
@@ -17,6 +17,18 @@
         {
           "date": "2022-01-18T17:11:21.987Z",
           "text": "Mais 1 comentario!"
+        },
+        {
+          "date": "2022-01-18T20:40:03.938Z",
+          "text": "koe menor"
+        },
+        {
+          "date": "2022-02-02T17:58:05.335Z",
+          "text": "koe"
+        },
+        {
+          "date": "2022-02-02T18:00:01.759Z",
+          "text": "deu bom?"
         }
       ],
       "id": 1
@@ -68,6 +80,30 @@
       "countComment": 0,
       "comments": [],
       "id": 5
+    },
+    {
+      "title": "Const Route",
+      "description": "constante de rota utiliza o RouteModule",
+      "syntax": "typescript",
+      "color": "#99c819",
+      "code": "<span class=\"hljs-keyword\">const</span> <span class=\"hljs-attr\">routes</span>: <span class=\"hljs-title class_\">Routes</span> = [\n  {\n    <span class=\"hljs-attr\">path</span>: <span class=\"hljs-string\">''</span>,\n    <span class=\"hljs-attr\">pathMatch</span>: <span class=\"hljs-string\">'full'</span>,\n    <span class=\"hljs-attr\">redirectTo</span>: <span class=\"hljs-string\">'editor'</span>,\n  },\n  {\n    <span class=\"hljs-attr\">path</span>: <span class=\"hljs-string\">'editor'</span>,\n    <span class=\"hljs-attr\">component</span>: <span class=\"hljs-title class_\">EditorComponent</span>,\n  },\n  {\n    <span class=\"hljs-attr\">path</span>: <span class=\"hljs-string\">'community'</span>,\n    <span class=\"hljs-attr\">component</span>: <span class=\"hljs-title class_\">CommunityComponent</span>,\n  },\n];",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 0,
+      "comments": [],
+      "id": 6
+    },
+    {
+      "title": "Proxy Config - Angular",
+      "description": "Código de configuração de proxy",
+      "syntax": "javascript",
+      "color": "#ff8a8a",
+      "code": "<span class=\"hljs-keyword\">const</span> proxy = [{\n  <span class=\"hljs-attr\">context</span>: <span class=\"hljs-string\">'/api'</span>,\n  <span class=\"hljs-attr\">target</span>: <span class=\"hljs-string\">'http://localhost:3000'</span>,\n  <span class=\"hljs-attr\">secure</span>: <span class=\"hljs-literal\">false</span>,\n  <span class=\"hljs-attr\">changeOrigin</span>: <span class=\"hljs-literal\">true</span>,\n  <span class=\"hljs-attr\">logLevel</span>: <span class=\"hljs-string\">'debug'</span>,\n  <span class=\"hljs-attr\">pathRewrite</span>: {<span class=\"hljs-string\">\"^/api\"</span> : <span class=\"hljs-string\">\"\"</span>}\n}];\n\n\n<span class=\"hljs-variable language_\">module</span>.<span class=\"hljs-property\">exports</span> = proxy;",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 0,
+      "comments": [],
+      "id": 7
     }
   ]
 }

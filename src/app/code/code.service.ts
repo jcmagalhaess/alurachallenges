@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Code, Codes } from './code';
 
-const API = environment.urlAPI;
+const API = environment.api;
 const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'});
 
 @Injectable({

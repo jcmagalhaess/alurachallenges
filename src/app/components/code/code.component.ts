@@ -1,15 +1,25 @@
-import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
-import hljs from 'highlight.js/lib/common';
+import {
+  Component,
+  Input,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Output,
+  EventEmitter,
+} from "@angular/core";
+import hljs from "highlight.js/lib/common";
 
 @Component({
-  selector: 'app-code',
-  templateUrl: './code.component.html',
-  styleUrls: ['./code.component.scss'],
+  selector: "app-code",
+  templateUrl: "./code.component.html",
+  styleUrls: ["./code.component.scss"],
 })
 export class CodeComponent implements OnInit {
   hljs = hljs.listLanguages();
 
-  @ViewChild('editor') editor!: ElementRef;
+  @ViewChild("editor") editor!: ElementRef;
+
+  @Output() editorEvent = new EventEmitter<string>();
 
   @Input() color!: string;
   @Input() syntax!: string;
@@ -27,7 +37,7 @@ export class CodeComponent implements OnInit {
     const codigo = syntaxBlock!.innerText;
 
     syntaxBlock!.innerHTML = `<code class="hljs ${this.syntax}" contenteditable="true" aria-label="Editor de código"></code>`;
-    const code = syntaxBlock!.querySelector('code');
+    const code = syntaxBlock!.querySelector("code");
     code!.textContent = codigo;
     hljs.highlightElement(code as HTMLElement);
     console.log(code?.innerHTML);
@@ -37,9 +47,13 @@ export class CodeComponent implements OnInit {
     const syntaxBlock = this.editor?.nativeElement;
     const codigo = syntaxBlock!.innerText;
 
-    const code = syntaxBlock!.querySelector('code');
+    const code = syntaxBlock!.querySelector("code");
     code!.textContent = codigo;
     hljs.highlightElement(code as HTMLElement);
     return code?.innerHTML as string;
+  }
+
+  addNewItem(value: string) {
+    this.editorEvent.emit(value);
   }
 }

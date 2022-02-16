@@ -1,10 +1,19 @@
 <form class="c-form" [formGroup]="formHighlight" (submit)="cadastrar(editor.armazenarCodigo())">
   <div class="l-row l-row--justifyBetween">
     <div class="t-editor" style="--sidebar: 350px">
-      <app-code #editor [color]="color.value" [tag]="false" [syntax]="syntax.value" [editable]="true"></app-code>
-      <button [disabled]="formHighlight.get('syntaxHljs')?.invalid" type="button"
-        class="c-button c-button--outline u-mb--2" (click)="editor.changeSyntaxCode()">Visualizar com o
-        highlight</button>
+      <app-code
+        #editor
+        [tag]="false"
+        [color]="color"
+        [syntax]="syntax"
+        [editable]="true">
+      </app-code>
+      <button
+        type="button"
+        class="c-button c-button--outline u-mb--2"
+        [disabled]="!syntax"
+        (click)="editor.changeSyntaxCode()">Visualizar com o highlight
+      </button>
     </div>
 
     <aside class="t-sidebar t-sidebar--right" #sidebar>
@@ -16,10 +25,10 @@
       </div>
       <span>Personalização</span>
       <div class="c-form__group u-mb--2">
-        <select class="c-form__input js-linguagem" formControlName="syntaxHljs" #syntax>
+        <select class="c-form__input" formControlName="syntax" (change)="alterarSyntax($event);">
           <option *ngFor="let language of editor.hljs" value="{{ language }}">{{ language }}</option>
         </select>
-        <input type="color" class="c-form__color u-mb--2 js-input-color" formControlName="inputColor" #color>
+        <input type="color" class="c-form__color u-mb--2" formControlName="color" (input)="changeColor($event);">
       </div>
       <button [disabled]="formHighlight?.invalid" type="submit" class="c-button c-button--fill">Salvar projeto</button>
     </aside>
