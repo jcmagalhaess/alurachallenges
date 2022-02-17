@@ -1,8 +1,7 @@
-import { AppComponent } from './app.component';
-import { CommunityComponent } from './community/community.component';
-import { EditorComponent } from './editor/editor.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CommunityComponent } from './features/community/components/community.component';
+import { EditorComponent } from './features/editor/components/editor.component';
 
 const routes: Routes = [
   {

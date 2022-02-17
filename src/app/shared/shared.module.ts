@@ -1,11 +1,12 @@
-import { CommentModule } from './../components/comment/comment.module';
-import { CodeModule } from './../components/code/code.module';
-import { AvatarModule } from './../components/avatar/avatar.module';
-import { BadgeModule } from './../components/badge/badge.module';
-import { MenuModule } from './../components/menu/menu.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { CodeModule } from './code/code.module';
+import { AvatarModule } from './avatar/avatar.module';
+import { BadgeModule } from './badge/badge.module';
+import { MenuModule } from '../core/layout/menu/menu.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   imports: [
@@ -15,8 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BadgeModule,
     AvatarModule,
     CodeModule,
-    CommentModule
+    MatFormFieldModule,
   ],
-  exports: [MenuModule, FontAwesomeModule, BadgeModule, AvatarModule, CodeModule, CommentModule],
+  exports: [MenuModule, FontAwesomeModule, BadgeModule, AvatarModule, CodeModule],
 })
 export class SharedModule {}
