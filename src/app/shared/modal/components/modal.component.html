@@ -2,7 +2,7 @@
   <div class="c-modal__overlay" (click)="toggle()"></div>
   <div class="c-modal__panel">
     <div class="c-modal__editor">
-      <app-code color="{{ feed.color}}" [limitHight]="false" syntax="{{ feed.syntax }}" [code]="feed.code" [editable]="false"></app-code>
+      <app-code [limitHight]="false" [code]="feed.code" [editable]="false"></app-code>
     </div>
     <div class="c-modal__informations">
       <div class="c-modal__content">

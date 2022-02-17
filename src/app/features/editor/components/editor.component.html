@@ -1,26 +1,34 @@
-<form class="c-form" [formGroup]="formHighlight" (submit)="cadastrar(code.armazenarCodigo())">
+<form class="c-form" [formGroup]="formHighlight" (submit)="cadastrar()">
   <div class="l-row l-row--justifyBetween">
     <div class="t-editor" style="--sidebar: 350px">
       <app-code
         [tag]="false"
-        [color]="color"
-        [syntax]="syntax"
-        [editable]="true">
+        [editable]="true"
+        [formatar]="formatar$">
       </app-code>
       <button
         type="button"
         class="c-button c-button--outline u-mb--2"
         [disabled]="!syntax"
-        (click)="code.changeSyntaxCode()">Visualizar com o highlight
+        (click)="generateSyntax()">Visualizar com o highlight
       </button>
     </div>
 
     <aside class="t-sidebar t-sidebar--right" #sidebar>
       <span>Seu projeto</span>
       <div class="c-form__group u-mb--2">
-        <input type="text" class="c-form__input" placeholder="Nome do seu projeto" formControlName="title">
-        <textarea class="c-form__input u-mb--2" placeholder="Descrição do seu projeto"
-          formControlName="description" ngClass=""></textarea>
+        <input
+          type="text"
+          class="c-form__input"
+          placeholder="Nome do seu projeto"
+          formControlName="title"
+          [ngClass]="{ 'is-required' : formHighlight.get('title')?.errors && formHighlight.get('title')?.touched }">
+        <textarea
+          class="c-form__input u-mb--2"
+          placeholder="Descrição do seu projeto"
+          formControlName="description"
+          [ngClass]="{ 'is-required' : formHighlight.get('description')?.errors && formHighlight.get('description')?.touched }">
+        </textarea>
       </div>
       <span>Personalização</span>
       <div class="c-form__group u-mb--2">

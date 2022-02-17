@@ -4,8 +4,11 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
+  Output,
+  EventEmitter,
 } from "@angular/core";
 import hljs from "highlight.js/lib/common";
+import { Subject } from "rxjs";
 
 @Component({
   selector: "app-code",
@@ -14,29 +17,45 @@ import hljs from "highlight.js/lib/common";
 })
 export class CodeComponent implements OnInit {
   public hljs = hljs.listLanguages();
+  public syntax!: string;
+  public color!: string;
 
   @ViewChild("editor") editor!: ElementRef;
 
-  @Input() color!: string;
-  @Input() syntax!: string;
   @Input() code!: string;
   @Input() editable!: boolean;
   @Input() limitHight!: boolean;
   @Input() tag = true;
+  @Input() formatar!: Subject<string>;
 
-  constructor() {}
+  @Output() codeChanged = new EventEmitter<string>();
 
-  ngOnInit(): void {}
+  constructor() {
+  }
+  
+  ngOnInit(): void {
+    console.log(this.syntax)
+    this.formatar.subscribe({
+      next: data => {
+        if (data.match('#')) {
+          this.color = data;
+        } else {
+          this.syntax = 'language-'.concat(data)
+          this.changeSyntaxCode();
+        }
+      }
+    })
+  }
 
   public changeSyntaxCode() {
     const syntaxBlock = this.editor?.nativeElement;
     const codigo = syntaxBlock!.innerText;
 
-    syntaxBlock!.innerHTML = `<code class="hljs ${this.syntax}" contenteditable="true" aria-label="Editor de código"></code>`;
+    // this.codeChanged.emit(codigo)
     const code = syntaxBlock!.querySelector("code");
     code!.textContent = codigo;
     hljs.highlightElement(code as HTMLElement);
-    console.log(code?.innerHTML);
+    console.log(code)
   }
 
   public armazenarCodigo() {

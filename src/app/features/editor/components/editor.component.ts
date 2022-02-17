@@ -1,3 +1,4 @@
+import { Subject } from 'rxjs';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
@@ -15,6 +16,9 @@ export class EditorComponent implements AfterViewInit, OnInit {
   public color!: string;
   public syntax!: string;
   public languages!: Array<string>;
+  public teste!: any;
+
+  public formatar$ = new Subject<string>();
 
   @ViewChild("editor") editor!: ElementRef;
   @ViewChild(CodeComponent) code!: CodeComponent;
@@ -40,13 +44,13 @@ export class EditorComponent implements AfterViewInit, OnInit {
     this._ref.detectChanges();
   }
 
-  cadastrar(codigo: string) {
+  cadastrar() {
     const data: Code = {
       title: this.formHighlight.get("title")?.value,
       description: this.formHighlight.get("description")?.value,
       syntax: this.formHighlight.get("syntaxHljs")?.value,
       color: this.formHighlight.get("inputColor")?.value,
-      code: codigo,
+      code: this.code.armazenarCodigo(),
       countLike: 0,
       statusLike: false,
       countComment: 0,
@@ -62,10 +66,19 @@ export class EditorComponent implements AfterViewInit, OnInit {
   }
 
   alterarSyntax(event: any) {
+    // console.log(event);
     this.syntax = event.target.value;
   }
 
   changeColor(event: any) {
-    this.color = event.target.value;
+    // this.color = event.target.value;
+    this.formatar$.next(event.target.value);
+  }
+
+  generateSyntax() {
+    this.formatar$.next(this.syntax);
+  }
+
+  insertingColor() {
   }
 }
