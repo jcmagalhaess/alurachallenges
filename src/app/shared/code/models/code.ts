@@ -1,4 +1,5 @@
-import { Comments } from '../../../core/layout/comment/comment';
+import { Comments } from "../../comment/models/comment";
+
 export interface Codes extends Array<Code> {}
 
 export interface Code {

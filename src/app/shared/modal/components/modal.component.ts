@@ -1,8 +1,10 @@
-import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { Code } from '../../../../shared/code/models/code';
-import { CommentService } from 'src/app/core/layout/comment/comment.service';
-import { Comment } from 'src/app/core/layout/comment/comment';
+import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
+
+import { CommentService } from 'src/app/shared/comment/services/comment.service';
+
+import { Code } from 'src/app/shared/code/models/code';
+import { Comment } from 'src/app/shared/comment/models/comment';
 
 @Component({
   selector: 'app-modal',

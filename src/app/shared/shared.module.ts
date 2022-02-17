@@ -7,6 +7,7 @@ import { BadgeModule } from './badge/badge.module';
 import { MenuModule } from '../core/layout/menu/menu.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ModalModule } from './modal/modal.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AvatarModule,
     CodeModule,
     MatFormFieldModule,
+    ModalModule
   ],
-  exports: [MenuModule, FontAwesomeModule, BadgeModule, AvatarModule, CodeModule],
+  exports: [MenuModule, FontAwesomeModule, BadgeModule, AvatarModule, CodeModule, ModalModule],
 })
 export class SharedModule {}

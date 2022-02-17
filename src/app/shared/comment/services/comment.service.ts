@@ -1,10 +1,8 @@
-import { Comment, Comments } from './comment';
-import { pluck, tap, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 
-// const API = environment.urlAPI;
+import { Comments } from '../models/comment';
 
 @Injectable({
   providedIn: 'root',

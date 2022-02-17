@@ -4,8 +4,6 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
-  Output,
-  EventEmitter,
 } from "@angular/core";
 import hljs from "highlight.js/lib/common";
 
@@ -15,11 +13,9 @@ import hljs from "highlight.js/lib/common";
   styleUrls: ["./code.component.scss"],
 })
 export class CodeComponent implements OnInit {
-  hljs = hljs.listLanguages();
+  public hljs = hljs.listLanguages();
 
   @ViewChild("editor") editor!: ElementRef;
-
-  @Output() editorEvent = new EventEmitter<string>();
 
   @Input() color!: string;
   @Input() syntax!: string;
@@ -32,7 +28,7 @@ export class CodeComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  changeSyntaxCode() {
+  public changeSyntaxCode() {
     const syntaxBlock = this.editor?.nativeElement;
     const codigo = syntaxBlock!.innerText;
 
@@ -43,7 +39,7 @@ export class CodeComponent implements OnInit {
     console.log(code?.innerHTML);
   }
 
-  armazenarCodigo() {
+  public armazenarCodigo() {
     const syntaxBlock = this.editor?.nativeElement;
     const codigo = syntaxBlock!.innerText;
 
@@ -53,7 +49,7 @@ export class CodeComponent implements OnInit {
     return code?.innerHTML as string;
   }
 
-  addNewItem(value: string) {
-    this.editorEvent.emit(value);
+  public getLanguages() {
+    return this.hljs
   }
 }

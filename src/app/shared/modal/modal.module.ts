@@ -1,10 +1,11 @@
-import { BadgeModule } from "../../../shared/badge/badge.module";
-import { CommentModule } from "../comment/comment.module";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CommentModule } from './../comment/comment.module';
+import { BadgeModule } from './../badge/badge.module';
+import { CodeModule } from './../code/code.module';
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ModalComponent } from "./components/modal.component";
-import { CodeModule } from "../../../shared/code/code.module";
 
 @NgModule({
   declarations: [ModalComponent],
@@ -12,9 +13,9 @@ import { CodeModule } from "../../../shared/code/code.module";
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    CommentModule,
     CodeModule,
     BadgeModule,
+    CommentModule
   ],
   exports: [ModalComponent],
 })

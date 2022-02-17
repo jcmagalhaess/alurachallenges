@@ -1,6 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { CodeComponent } from "src/app/shared/code/components/code.component";
 import { Code } from "src/app/shared/code/models/code";
 import { EditorService } from "../services/editor.service";
 
@@ -9,17 +10,20 @@ import { EditorService } from "../services/editor.service";
   templateUrl: "./editor.component.html",
   styleUrls: ["./editor.component.scss"],
 })
-export class EditorComponent implements OnInit {
+export class EditorComponent implements AfterViewInit, OnInit {
   public formHighlight!: FormGroup;
   public color!: string;
   public syntax!: string;
+  public languages!: Array<string>;
 
   @ViewChild("editor") editor!: ElementRef;
+  @ViewChild(CodeComponent) code!: CodeComponent;
 
   constructor(
     private _formBuilder: FormBuilder,
     private _editorService: EditorService,
-    private _router: Router
+    private _router: Router,
+    private _ref: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -29,6 +33,11 @@ export class EditorComponent implements OnInit {
       color: ["#6bd1ff", Validators.required],
       syntax: ["", Validators.required],
     });
+  }
+
+  ngAfterViewInit() {
+    this.languages = this.code.hljs;
+    this._ref.detectChanges();
   }
 
   cadastrar(codigo: string) {

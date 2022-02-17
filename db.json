@@ -6,8 +6,8 @@
       "syntax": "javascript",
       "color": "#38fe10",
       "code": "<span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">'teste'</span>);",
-      "countLike": 1,
-      "statusLike": true,
+      "countLike": 0,
+      "statusLike": false,
       "countComment": 5,
       "comments": [
         {

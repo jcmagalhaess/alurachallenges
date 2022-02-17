@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ModalComponent } from './../../../shared/modal/components/modal.component';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import hljs from 'highlight.js/lib/common';
 import { faBorderAll, faComment, faHeart, faStream } from '@fortawesome/free-solid-svg-icons';
 import { debounceTime, distinctUntilChanged, filter, merge, switchMap, tap } from 'rxjs';
@@ -39,7 +40,6 @@ export class CommunityComponent implements OnInit {
   faHeart = faHeart;
 
   structure = false
-
 
   constructor(
     private _codesService: CodeService,

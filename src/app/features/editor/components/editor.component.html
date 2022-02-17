@@ -1,8 +1,7 @@
-<form class="c-form" [formGroup]="formHighlight" (submit)="cadastrar(editor.armazenarCodigo())">
+<form class="c-form" [formGroup]="formHighlight" (submit)="cadastrar(code.armazenarCodigo())">
   <div class="l-row l-row--justifyBetween">
     <div class="t-editor" style="--sidebar: 350px">
       <app-code
-        #editor
         [tag]="false"
         [color]="color"
         [syntax]="syntax"
@@ -12,7 +11,7 @@
         type="button"
         class="c-button c-button--outline u-mb--2"
         [disabled]="!syntax"
-        (click)="editor.changeSyntaxCode()">Visualizar com o highlight
+        (click)="code.changeSyntaxCode()">Visualizar com o highlight
       </button>
     </div>
 
@@ -21,12 +20,12 @@
       <div class="c-form__group u-mb--2">
         <input type="text" class="c-form__input" placeholder="Nome do seu projeto" formControlName="title">
         <textarea class="c-form__input u-mb--2" placeholder="Descrição do seu projeto"
-          formControlName="description"></textarea>
+          formControlName="description" ngClass=""></textarea>
       </div>
       <span>Personalização</span>
       <div class="c-form__group u-mb--2">
         <select class="c-form__input" formControlName="syntax" (change)="alterarSyntax($event);">
-          <option *ngFor="let language of editor.hljs" value="{{ language }}">{{ language }}</option>
+          <option *ngFor="let language of languages" value="{{ language }}">{{ language }}</option>
         </select>
         <input type="color" class="c-form__color u-mb--2" formControlName="color" (input)="changeColor($event);">
       </div>
