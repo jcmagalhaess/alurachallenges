@@ -1,10 +1,11 @@
-<form class="c-form" [formGroup]="formHighlight" (submit)="cadastrar()">
+<form class="c-form" [formGroup]="formHighlight">
   <div class="l-row l-row--justifyBetween">
     <div class="t-editor" style="--sidebar: 350px">
       <app-code
         [tag]="false"
         [editable]="true"
-        [formatar]="formatar$">
+        [syntaxFormat$]="syntaxFormat$"
+        [colorFormat$]="colorFormat$">
       </app-code>
       <button
         type="button"
@@ -37,7 +38,7 @@
         </select>
         <input type="color" class="c-form__color u-mb--2" formControlName="color" (input)="changeColor($event);">
       </div>
-      <button [disabled]="formHighlight?.invalid" type="submit" class="c-button c-button--fill">Salvar projeto</button>
+      <button [disabled]="formHighlight?.invalid" type="submit" class="c-button c-button--fill" (click)="cadastrar()">Salvar projeto</button>
     </aside>
   </div>
 </form>

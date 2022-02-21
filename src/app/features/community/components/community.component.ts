@@ -1,8 +1,9 @@
+import { LocalStorageService } from './../../../shared/local-storage/local-storage.service';
 import { ModalComponent } from './../../../shared/modal/components/modal.component';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import hljs from 'highlight.js/lib/common';
 import { faBorderAll, faComment, faHeart, faStream } from '@fortawesome/free-solid-svg-icons';
-import { debounceTime, distinctUntilChanged, filter, merge, switchMap, tap } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, merge, switchMap, tap, Subject } from 'rxjs';
 import { CodeService } from 'src/app/shared/code/services/code.service';
 import { CommunityService } from '../services/community.service';
 
@@ -14,17 +15,9 @@ const ESPERA_DIGITACAO = 300;
   styleUrls: ['./community.component.scss'],
 })
 export class CommunityComponent implements OnInit {
-  todosCodes$ = this._codesService.read().pipe(
-    tap(() => {
-      console.log('Fluxo incial');
-    })
-  );
-  filtroPeloInput$ = this._communityService.postInput.valueChanges.pipe(
+  public todosCodes$ = this._codesService.read();
+  public filtroPeloInput$ = this._communityService.postInput.valueChanges.pipe(
     debounceTime(ESPERA_DIGITACAO),
-    tap(() => {
-      console.log('Fluxo do filtro');
-    }),
-    tap(console.log),
     filter(
       (valorDigitado) => valorDigitado.length >= 3 || !valorDigitado.length
     ),
@@ -32,26 +25,32 @@ export class CommunityComponent implements OnInit {
     switchMap((valorDigitado) => this._codesService.read(valorDigitado))
   );
 
-  codes$ = merge(this.todosCodes$, this.filtroPeloInput$)
+  public posts = JSON.parse(this._storage.get('code'))
 
-  faMasonry = faStream;
-  faRegular = faBorderAll
-  faComment = faComment;
-  faHeart = faHeart;
+  public codes$ = merge(this.todosCodes$, this.filtroPeloInput$)
 
-  structure = false
+  public syntaxFormat$ = new Subject<string>();
+  public colorFormat$ = new Subject<string>();
+
+  public faMasonry = faStream;
+  public faRegular = faBorderAll
+  public faComment = faComment;
+  public faHeart = faHeart;
+
+  public structure = false
 
   constructor(
     private _codesService: CodeService,
-    private _communityService: CommunityService
+    private _communityService: CommunityService,
+    private _storage: LocalStorageService
   ) {}
 
   ngOnInit(): void {
-    hljs.highlightAll();
+    console.log(this.posts)
+    this.colorFormat$.next('#fff')
   }
 
-  toggleStructre() {
+  public toggleStructre() {
     this.structure = !this.structure
-    console.log(this.structure)
   }
 }

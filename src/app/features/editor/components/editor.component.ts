@@ -1,3 +1,4 @@
+import { Codes } from './../../../shared/code/models/code';
 import { Subject } from 'rxjs';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
@@ -5,6 +6,7 @@ import { Router } from "@angular/router";
 import { CodeComponent } from "src/app/shared/code/components/code.component";
 import { Code } from "src/app/shared/code/models/code";
 import { EditorService } from "../services/editor.service";
+import { LocalStorageService } from 'src/app/shared/local-storage/local-storage.service';
 
 @Component({
   selector: "app-editor",
@@ -17,15 +19,17 @@ export class EditorComponent implements AfterViewInit, OnInit {
   public syntax!: string;
   public languages!: Array<string>;
   public teste!: any;
+  public posts!: Codes
 
-  public formatar$ = new Subject<string>();
+  public syntaxFormat$ = new Subject<string>();
+  public colorFormat$ = new Subject<string>();
 
   @ViewChild("editor") editor!: ElementRef;
   @ViewChild(CodeComponent) code!: CodeComponent;
 
   constructor(
     private _formBuilder: FormBuilder,
-    private _editorService: EditorService,
+    private readonly _storage: LocalStorageService,
     private _router: Router,
     private _ref: ChangeDetectorRef
   ) {}
@@ -48,37 +52,34 @@ export class EditorComponent implements AfterViewInit, OnInit {
     const data: Code = {
       title: this.formHighlight.get("title")?.value,
       description: this.formHighlight.get("description")?.value,
-      syntax: this.formHighlight.get("syntaxHljs")?.value,
-      color: this.formHighlight.get("inputColor")?.value,
-      code: this.code.armazenarCodigo(),
+      syntax: this.formHighlight.get("syntax")?.value,
+      color: this.formHighlight.get("color")?.value,
+      code: this.code.generateCode.innerHTML,
       countLike: 0,
       statusLike: false,
       countComment: 0,
       comments: [],
     };
 
-    this._editorService.create(data).subscribe({
-      next: () => {
-        this._router.navigate(["community"]);
-      },
-      error: (error) => console.log(error),
-    });
+    if(!this.posts) this.posts = []
+    this.posts.push(data)
+    
+    this._storage.set('code', JSON.stringify(this.posts))
+    
+    // this._editorService.create(data).subscribe(() => {
+    //   this._router.navigate(["community"])
+    // });
   }
 
   alterarSyntax(event: any) {
-    // console.log(event);
     this.syntax = event.target.value;
   }
 
   changeColor(event: any) {
-    // this.color = event.target.value;
-    this.formatar$.next(event.target.value);
+    this.colorFormat$.next(event.target.value);
   }
 
   generateSyntax() {
-    this.formatar$.next(this.syntax);
-  }
-
-  insertingColor() {
+    this.syntaxFormat$.next(this.syntax);
   }
 }

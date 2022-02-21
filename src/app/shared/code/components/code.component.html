@@ -10,7 +10,8 @@
     </div>
     <div #editor class="c-code__editor" [ngClass]="{ 'c-code__editor--maxHeight': limitHight }">
       <code class="{{ syntax }}" [ngClass]="{'hljs' : syntax}" [contentEditable]="editable"
-        aria-label="Editor de Código" [innerHTML]="code"></code>
+        aria-label="Editor de Código" [innerHTML]="code">
+      </code>
     </div>
   </div>
 </div>

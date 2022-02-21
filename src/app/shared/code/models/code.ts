@@ -18,3 +18,8 @@ export interface Code {
 export interface CodesApi {
   payload: Codes;
 }
+
+export type CodeConfig = {
+  syntax?: string,
+  color?: string
+}

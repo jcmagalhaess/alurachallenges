@@ -75,8 +75,8 @@
       "syntax": "scss",
       "color": "#8af236",
       "code": "<span class=\"hljs-keyword\">@mixin</span> breakpoint(<span class=\"hljs-variable\">$point</span>) {\n  <span class=\"hljs-keyword\">@if</span> <span class=\"hljs-variable\">$point</span> == small-only {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">max-width</span>: <span class=\"hljs-number\">37.4375em</span>) {\n      <span class=\"hljs-comment\">// 599px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == small-up {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">37.5em</span>) {\n      <span class=\"hljs-comment\">// 600px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == medium-only {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">max-width</span>: <span class=\"hljs-number\">56.1875em</span>) {\n      <span class=\"hljs-comment\">// 899px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == medium-up {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">56.25em</span>) {\n      <span class=\"hljs-comment\">// 900px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == large-only {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">max-width</span>: <span class=\"hljs-number\">74.9375em</span>) {\n      <span class=\"hljs-comment\">// 1199px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> if <span class=\"hljs-variable\">$point</span> == large-up {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">min-width</span>: <span class=\"hljs-number\">75em</span>) {\n      <span class=\"hljs-comment\">// 1200px</span>\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  } <span class=\"hljs-keyword\">@else</span> {\n    <span class=\"hljs-keyword\">@media</span> (<span class=\"hljs-attribute\">min-width</span>: ((<span class=\"hljs-variable\">$point</span> / <span class=\"hljs-number\">16</span>) * <span class=\"hljs-number\">1em</span>)) {\n      <span class=\"hljs-keyword\">@content</span>;\n    }\n  }\n}",
-      "countLike": 0,
-      "statusLike": false,
+      "countLike": 1,
+      "statusLike": true,
       "countComment": 0,
       "comments": [],
       "id": 5
@@ -114,6 +114,26 @@
       "countComment": 0,
       "comments": [],
       "id": 8
+    },
+    {
+      "title": "Const name",
+      "description": "Const 'name' recebendo meu nome",
+      "code": "<span class=\"hljs-keyword\">const</span> name = <span class=\"hljs-string\">'julio'</span>;",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 0,
+      "comments": [],
+      "id": 9
+    },
+    {
+      "title": "qwqe",
+      "description": "wqeqwe",
+      "code": "<span class=\"hljs-keyword\">const</span> name = <span class=\"hljs-string\">'julio'</span>",
+      "countLike": 0,
+      "statusLike": false,
+      "countComment": 0,
+      "comments": [],
+      "id": 10
     }
   ]
 }

@@ -1,4 +1,4 @@
-<div class="t-feed" *ngIf="codes$ | async as codes; else elseBlock" [ngClass]="{ 't-feed--masonry': structure }">
+<div class="t-feed" *ngIf="posts; else elseBlock" [ngClass]="{ 't-feed--masonry': structure }">
   <div class="t-feed__buttons">
     <button class="t-feed__button" (click)="toggleStructre()" *ngIf="!structure">
       <fa-icon class="t-feed__icon" [icon]="faMasonry"></fa-icon>
@@ -8,21 +8,22 @@
     </button>
   </div>
   <div class="t-feed__list">
-    <div class="t-feed__item" *ngFor="let code of codes">
+    <div class="t-feed__item" *ngFor="let post of posts">
       <div class="t-editor">
-        <app-code #editor [limitHight]="true" [code]="code.code"
-          [editable]="false"></app-code>
+        <app-code [limitHight]="true"
+          [editable]="false"
+          [listUpdate]="[post.color, post.syntax, post.code]"></app-code>
       </div>
       <div class="t-feed__content">
-        <h2 class="t-feed__title">{{ code.title }}</h2>
-        <p>{{ code.description }}</p>
+        <h2 class="t-feed__title">{{ post.title }}</h2>
+        <p>{{ post.description }}</p>
       </div>
       <div class="t-feed__interactions js-slide-down">
         <div class="t-feed__actions">
-          <app-badge [icon]="faComment" [count]="code.comments.length" (click)="modal.toggle(); modal.feed = code;">
+          <app-badge [icon]="faComment" [count]="post.comments.length" (click)="modal.toggle(); modal.feed = post;">
           </app-badge>
-          <app-badge [icon]="faHeart" #like [status]="code.statusLike" [count]="code.countLike"
-            (click)="like.curtir(code.id);"></app-badge>
+          <app-badge [icon]="faHeart" #like [status]="post.statusLike" [count]="post.countLike"
+            (click)="like.curtir(post.id);"></app-badge>
         </div>
         <div class="t-feed__author">
           <app-avatar></app-avatar>
