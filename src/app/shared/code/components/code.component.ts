@@ -22,17 +22,18 @@ export class CodeComponent implements OnInit {
   public syntax!: string;
   public color!: string;
   public generateCode!: Element;
+  public code!: string;
 
   @ViewChild("editor") editor!: ElementRef;
 
-  @Input() code!: Code;
+  @Input() codeEditor!: Code;
   @Input() editable!: boolean;
   @Input() limitHight!: boolean;
   @Input() tag = true;
 
   @Input() syntaxFormat$!: Subject<string>;
   @Input() colorFormat$!: Subject<string>;
-  @Input() listUpdate!: any;
+  @Input() listUpdate!: Code;
 
   @Output() codeChanged = new EventEmitter<string>();
 
@@ -50,11 +51,14 @@ export class CodeComponent implements OnInit {
         this.color = data;
       });
 
-    console.log(this.listUpdate)
-    this.color = this.listUpdate[0];
-    this.syntax = this.listUpdate[1];
-    this.code = this.listUpdate[2];
     
+
+    if (this.listUpdate) {
+      console.log(this.listUpdate)
+      this.syntax = this.listUpdate.syntax;
+      this.color = this.listUpdate.color;
+      this.code = this.listUpdate.code;
+    }
   }
 
   public changeSyntaxCode() {

@@ -61,14 +61,15 @@ export class EditorComponent implements AfterViewInit, OnInit {
       comments: [],
     };
 
-    if(!this.posts) this.posts = []
-    this.posts.push(data)
-    
-    this._storage.set('code', JSON.stringify(this.posts))
-    
-    // this._editorService.create(data).subscribe(() => {
-    //   this._router.navigate(["community"])
-    // });
+    let posts = JSON.parse(this._storage.get('code'));
+
+    console.log(posts)
+
+    if(!posts) posts = []
+    posts.push(data)
+
+    this._storage.set('code', JSON.stringify(posts))
+    this._router.navigate(['community']);
   }
 
   alterarSyntax(event: any) {
