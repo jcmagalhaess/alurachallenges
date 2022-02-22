@@ -1,15 +1,21 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
+import {
+  Component,
+  ViewChild,
+  ElementRef,
+  OnInit,
+  Inject,
+} from "@angular/core";
+import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
 
-import { CommentService } from 'src/app/shared/comment/services/comment.service';
+import { CommentService } from "src/app/shared/comment/services/comment.service";
 
-import { Code } from 'src/app/shared/code/models/code';
-import { Comment } from 'src/app/shared/comment/models/comment';
+import { Code } from "src/app/shared/code/models/code";
+import { Comment } from "src/app/shared/comment/models/comment";
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss'],
+  selector: "app-modal",
+  templateUrl: "./modal.component.html",
+  styleUrls: ["./modal.component.scss"],
 })
 export class ModalComponent implements OnInit {
   faComment = faComment;
@@ -18,11 +24,14 @@ export class ModalComponent implements OnInit {
   feed!: Code;
   comment!: string;
 
-  @ViewChild('inputComment') inputComment!: ElementRef;
+  @ViewChild("inputComment") inputComment!: ElementRef;
 
-  constructor(private _commentService: CommentService) {}
+  constructor(
+    private _commentService: CommentService,
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   toggle() {
     this.abrirModal = !this.abrirModal;
@@ -38,6 +47,6 @@ export class ModalComponent implements OnInit {
     this._commentService
       .saveComment(this.feed.comments, this.feed.id as number)
       .subscribe();
-    this.inputComment.nativeElement.value = '';
+    this.inputComment.nativeElement.value = "";
   }
 }

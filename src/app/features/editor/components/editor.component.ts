@@ -20,6 +20,7 @@ export class EditorComponent implements AfterViewInit, OnInit {
   public languages!: Array<string>;
   public teste!: any;
   public posts!: Codes
+  public validatedButton = true;
 
   public syntaxFormat$ = new Subject<string>();
   public colorFormat$ = new Subject<string>();
@@ -41,6 +42,7 @@ export class EditorComponent implements AfterViewInit, OnInit {
       color: ["#6bd1ff", Validators.required],
       syntax: ["", Validators.required],
     });
+    console.log(this.validatedButton)
   }
 
   ngAfterViewInit() {
@@ -82,5 +84,7 @@ export class EditorComponent implements AfterViewInit, OnInit {
 
   generateSyntax() {
     this.syntaxFormat$.next(this.syntax);
+    if (this.validatedButton == true)
+      this.validatedButton = !this.validatedButton;
   }
 }

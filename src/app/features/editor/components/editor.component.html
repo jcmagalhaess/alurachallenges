@@ -38,7 +38,9 @@
         </select>
         <input type="color" class="c-form__color u-mb--2" formControlName="color" (input)="changeColor($event);">
       </div>
-      <button [disabled]="formHighlight?.invalid" type="submit" class="c-button c-button--fill" (click)="cadastrar()">Salvar projeto</button>
+      <button [disabled]="formHighlight?.invalid || validatedButton" type="submit" class="c-button c-button--fill" (click)="cadastrar()">Salvar projeto</button>
+      {{ validatedButton }}
+      {{ formHighlight?.invalid }}
     </aside>
   </div>
 </form>

@@ -1,9 +1,9 @@
-<div class="c-modal" [ngClass]="{ 'is-hidden' : abrirModal }" *ngIf="feed">
+<!-- <div class="c-modal" [ngClass]="{ 'is-hidden' : abrirModal }" *ngIf="feed">
   <div class="c-modal__overlay" (click)="toggle()"></div>
   <div class="c-modal__panel">
     <div class="c-modal__editor">
       <app-code [limitHight]="false" [editable]="false"
-      [codeEditor]="feed"></app-code>
+      [listUpdate]="feed"></app-code>
     </div>
     <div class="c-modal__informations">
       <div class="c-modal__content">
@@ -23,4 +23,35 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<h2 mat-dialog-title>TITULO</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="c-modal__panel">
+    <div class="c-modal__editor">
+      <app-code [limitHight]="false" [editable]="false"
+      [listUpdate]="feed"></app-code>
+    </div>
+    <div class="c-modal__informations">
+      <div class="c-modal__content">
+        <h2 class="c-modal__title">Titulo</h2>
+        <p class="c-modal__description">Descrição</p>
+        <div class="c-modal__comments">
+          <!-- <app-comment [comments]="feed.comments"></app-comment> -->
+        </div>
+      </div>
+      <div class="c-modal__actions">
+        <div class="c-modal__buttons">
+          <!-- <app-badge [icon]="faComment" [count]="feed.comments.length"></app-badge> -->
+        </div>
+        <form class="c-form u-mb--1">
+          <input class="c-form__input" type="text" #inputComment (keyup.enter)="armazenarComentario(inputComment.value)">
+        </form>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+</mat-dialog-actions>

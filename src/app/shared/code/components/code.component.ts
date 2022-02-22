@@ -51,10 +51,7 @@ export class CodeComponent implements OnInit {
         this.color = data;
       });
 
-    
-
     if (this.listUpdate) {
-      console.log(this.listUpdate)
       this.syntax = this.listUpdate.syntax;
       this.color = this.listUpdate.color;
       this.code = this.listUpdate.code;

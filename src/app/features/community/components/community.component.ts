@@ -1,11 +1,11 @@
-import { LocalStorageService } from './../../../shared/local-storage/local-storage.service';
 import { ModalComponent } from './../../../shared/modal/components/modal.component';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import hljs from 'highlight.js/lib/common';
+import { LocalStorageService } from './../../../shared/local-storage/local-storage.service';
+import { Component, OnInit } from '@angular/core';
 import { faBorderAll, faComment, faHeart, faStream } from '@fortawesome/free-solid-svg-icons';
-import { debounceTime, distinctUntilChanged, filter, merge, switchMap, tap, Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, merge, switchMap, Subject } from 'rxjs';
 import { CodeService } from 'src/app/shared/code/services/code.service';
 import { CommunityService } from '../services/community.service';
+import { MatDialog } from '@angular/material/dialog';
 
 const ESPERA_DIGITACAO = 300;
 
@@ -42,15 +42,26 @@ export class CommunityComponent implements OnInit {
   constructor(
     private _codesService: CodeService,
     private _communityService: CommunityService,
-    private _storage: LocalStorageService
+    private _storage: LocalStorageService,
+    private _dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
-    console.log(this.posts)
     this.colorFormat$.next('#fff')
   }
 
   public toggleStructre() {
     this.structure = !this.structure
+  }
+
+  public modalOpen() {
+    // const dialogRef = this._dialog.open(ModalComponent, {
+    //   minWidth: '800px',
+    //   data: this.posts
+    // });
+
+    // dialogRef.afterClosed().subscribe( result => {
+    //   console.log(`Dialog result: ${result}`)
+    // } )
   }
 }

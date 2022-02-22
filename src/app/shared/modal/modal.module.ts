@@ -6,6 +6,7 @@ import { CommonModule } from "@angular/common";
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ModalComponent } from "./components/modal.component";
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [ModalComponent],
@@ -15,7 +16,8 @@ import { ModalComponent } from "./components/modal.component";
     ReactiveFormsModule,
     CodeModule,
     BadgeModule,
-    CommentModule
+    CommentModule,
+    MatDialogModule
   ],
   exports: [ModalComponent],
 })
