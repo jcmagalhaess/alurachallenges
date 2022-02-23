@@ -1,3 +1,4 @@
+import { Code } from './../../../shared/code/models/code';
 import { ModalComponent } from './../../../shared/modal/components/modal.component';
 import { LocalStorageService } from './../../../shared/local-storage/local-storage.service';
 import { Component, OnInit } from '@angular/core';
@@ -37,7 +38,8 @@ export class CommunityComponent implements OnInit {
   public faComment = faComment;
   public faHeart = faHeart;
 
-  public structure = false
+  public structure = false;
+  public animal!: string;
 
   constructor(
     private _codesService: CodeService,
@@ -54,14 +56,10 @@ export class CommunityComponent implements OnInit {
     this.structure = !this.structure
   }
 
-  public modalOpen() {
-    // const dialogRef = this._dialog.open(ModalComponent, {
-    //   minWidth: '800px',
-    //   data: this.posts
-    // });
-
-    // dialogRef.afterClosed().subscribe( result => {
-    //   console.log(`Dialog result: ${result}`)
-    // } )
+  public modalOpen(post: Code) {
+    const dialogRef = this._dialog.open(ModalComponent, {
+      width: '800px',
+      data: post,
+    });
   }
 }

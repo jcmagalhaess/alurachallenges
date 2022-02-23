@@ -3,7 +3,7 @@ import { Comments } from "../../comment/models/comment";
 export interface Codes extends Array<Code> {}
 
 export interface Code {
-  id?: number;
+  id: number;
   title: string;
   description: string;
   syntax: string;

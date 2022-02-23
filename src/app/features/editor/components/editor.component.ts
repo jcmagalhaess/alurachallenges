@@ -21,12 +21,12 @@ export class EditorComponent implements AfterViewInit, OnInit {
   public teste!: any;
   public posts!: Codes
   public validatedButton = true;
+  public codeChanged!: string
+
+  @ViewChild(CodeComponent) code!: CodeComponent;
 
   public syntaxFormat$ = new Subject<string>();
   public colorFormat$ = new Subject<string>();
-
-  @ViewChild("editor") editor!: ElementRef;
-  @ViewChild(CodeComponent) code!: CodeComponent;
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -42,7 +42,6 @@ export class EditorComponent implements AfterViewInit, OnInit {
       color: ["#6bd1ff", Validators.required],
       syntax: ["", Validators.required],
     });
-    console.log(this.validatedButton)
   }
 
   ngAfterViewInit() {
@@ -51,7 +50,17 @@ export class EditorComponent implements AfterViewInit, OnInit {
   }
 
   cadastrar() {
+    let nextId = 1
+    let posts = JSON.parse(this._storage.get('code'));
+
+    if(!posts) {
+      posts = [];
+    } else {
+      nextId = posts.sort((a: Code, b: Code) => b.id - a.id)[0].id + 1
+    }
+
     const data: Code = {
+      id: nextId,
       title: this.formHighlight.get("title")?.value,
       description: this.formHighlight.get("description")?.value,
       syntax: this.formHighlight.get("syntax")?.value,
@@ -62,10 +71,6 @@ export class EditorComponent implements AfterViewInit, OnInit {
       countComment: 0,
       comments: [],
     };
-
-    let posts = JSON.parse(this._storage.get('code'));
-
-    console.log(posts)
 
     if(!posts) posts = []
     posts.push(data)
@@ -86,5 +91,9 @@ export class EditorComponent implements AfterViewInit, OnInit {
     this.syntaxFormat$.next(this.syntax);
     if (this.validatedButton == true)
       this.validatedButton = !this.validatedButton;
+  }
+
+  generatedCode(event: Element) {
+    this.codeChanged = event.innerHTML
   }
 }

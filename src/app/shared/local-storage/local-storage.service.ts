@@ -11,12 +11,8 @@ export class LocalStorageService {
     this._storage = window.localStorage;
   }
 
-  set(key: string, value: string): boolean {
-    if (this._storage) {
-      this._storage.setItem(key, value);
-      return true;
-    }
-    return false;
+  set(key: string, value: string) {
+    this._storage.setItem(key, value);
   }
 
   get(key: string): any {

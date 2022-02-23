@@ -7,6 +7,8 @@ import {
   ElementRef,
   Output,
   EventEmitter,
+  Directive,
+  HostListener,
 } from "@angular/core";
 import hljs from "highlight.js/lib/common";
 import { Subject } from "rxjs";
@@ -35,7 +37,7 @@ export class CodeComponent implements OnInit {
   @Input() colorFormat$!: Subject<string>;
   @Input() listUpdate!: Code;
 
-  @Output() codeChanged = new EventEmitter<string>();
+  @Output() codeChanged = new EventEmitter<Element>();
 
   constructor() {}
 
@@ -65,6 +67,8 @@ export class CodeComponent implements OnInit {
     this.generateCode = syntaxBlock!.querySelector("code");
     this.generateCode!.textContent = codigo;
     hljs.highlightElement(this.generateCode as HTMLElement);
+
+    this.codeChanged.emit(this.generateCode)
   }
 
   public getLanguages() {

@@ -5,7 +5,8 @@
         [tag]="false"
         [editable]="true"
         [syntaxFormat$]="syntaxFormat$"
-        [colorFormat$]="colorFormat$">
+        [colorFormat$]="colorFormat$"
+        (codeChanged)="generatedCode($event)">
       </app-code>
       <button
         type="button"
@@ -39,8 +40,6 @@
         <input type="color" class="c-form__color u-mb--2" formControlName="color" (input)="changeColor($event);">
       </div>
       <button [disabled]="formHighlight?.invalid || validatedButton" type="submit" class="c-button c-button--fill" (click)="cadastrar()">Salvar projeto</button>
-      {{ validatedButton }}
-      {{ formHighlight?.invalid }}
     </aside>
   </div>
 </form>

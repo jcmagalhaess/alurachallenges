@@ -1,5 +1,7 @@
 export interface Comment {
-  date: Date;
+  codeId: number;
+  id: number;
+  date: string;
   text: string;
 }
 

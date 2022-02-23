@@ -10,9 +10,11 @@
   <div class="t-feed__list">
     <div class="t-feed__item" *ngFor="let post of posts">
       <div class="t-editor">
-        <app-code [limitHight]="true"
+        <app-code
+          [limitHight]="true"
           [editable]="false"
-          [listUpdate]="post"></app-code>
+          [listUpdate]="post"
+        ></app-code>
       </div>
       <div class="t-feed__content">
         <h2 class="t-feed__title">{{ post.title }}</h2>
@@ -20,7 +22,7 @@
       </div>
       <div class="t-feed__interactions js-slide-down">
         <div class="t-feed__actions">
-          <app-badge [icon]="faComment" [count]="post.comments.length" (click)="modalOpen()">
+          <app-badge [icon]="faComment" [count]="post.comments.length" (click)="modalOpen(post)">
           </app-badge>
           <app-badge [icon]="faHeart" #like [status]="post.statusLike" [count]="post.countLike"
             (click)="like.curtir(post.id);"></app-badge>
@@ -32,8 +34,6 @@
     </div>
   </div>
 </div>
-
-<app-modal #modal></app-modal>
 
 <ng-template #elseBlock>
   <em>Não há dados</em>
