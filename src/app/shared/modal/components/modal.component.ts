@@ -1,12 +1,12 @@
-import { filter } from 'rxjs';
+import { Comments } from './../../comment/models/comment';
 import { LocalStorageService } from './../../local-storage/local-storage.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import {
   Component,
-  ViewChild,
-  ElementRef,
   OnInit,
   Inject,
+  Output,
+  EventEmitter,
 } from "@angular/core";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
 
@@ -24,6 +24,8 @@ export class ModalComponent implements OnInit {
   public faComment = faComment;
   public faHeart = faHeart;
 
+  @Output() updateData = new EventEmitter<Comments>();
+
   constructor(
     private _storage: LocalStorageService,
     public dialogRef: MatDialogRef<ModalComponent>,
@@ -39,8 +41,7 @@ export class ModalComponent implements OnInit {
   armazenarComentario() {
     let codes = JSON.parse(this._storage.get('code'));
     let codeFilter = codes.filter((_comment: Comment) => _comment.id == this.data.id)[0];
-    
-    let comments = [...codeFilter.comments];
+    let comments: Comments = [...codeFilter.comments];
     let nextId = 1;
 
     if (comments.length)
@@ -52,13 +53,12 @@ export class ModalComponent implements OnInit {
       date: new Date().toISOString(),
       text: this.formComments.get('comments')?.value,
     };
-
     codeFilter.comments.push(comment);
 
     this.data = codeFilter;
-
     this._storage.set('code', JSON.stringify(codes));
-    
-    this.formComments.reset('')
+    this.formComments.reset('');
+
+    this.updateData.emit(codeFilter.comments);
   }
 }

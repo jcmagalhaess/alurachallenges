@@ -1,4 +1,3 @@
-import { Codes } from './../models/code';
 import {
   Component,
   Input,
@@ -7,8 +6,6 @@ import {
   ElementRef,
   Output,
   EventEmitter,
-  Directive,
-  HostListener,
 } from "@angular/core";
 import hljs from "highlight.js/lib/common";
 import { Subject } from "rxjs";

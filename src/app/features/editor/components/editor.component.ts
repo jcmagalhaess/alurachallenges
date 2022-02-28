@@ -65,7 +65,7 @@ export class EditorComponent implements AfterViewInit, OnInit {
       description: this.formHighlight.get("description")?.value,
       syntax: this.formHighlight.get("syntax")?.value,
       color: this.formHighlight.get("color")?.value,
-      code: this.code.generateCode.innerHTML,
+      code: this.codeChanged,
       countLike: 0,
       statusLike: false,
       countComment: 0,

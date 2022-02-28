@@ -1,4 +1,4 @@
-import { Code } from './../../../shared/code/models/code';
+import { Comments } from './../../../shared/comment/models/comment';
 import { ModalComponent } from './../../../shared/modal/components/modal.component';
 import { LocalStorageService } from './../../../shared/local-storage/local-storage.service';
 import { Component, OnInit } from '@angular/core';
@@ -7,6 +7,8 @@ import { debounceTime, distinctUntilChanged, filter, merge, switchMap, Subject }
 import { CodeService } from 'src/app/shared/code/services/code.service';
 import { CommunityService } from '../services/community.service';
 import { MatDialog } from '@angular/material/dialog';
+import { Comment } from 'src/app/shared/comment/models/comment';
+import { Code } from 'src/app/shared/code/models/code';
 
 const ESPERA_DIGITACAO = 300;
 
@@ -40,6 +42,7 @@ export class CommunityComponent implements OnInit {
 
   public structure = false;
   public animal!: string;
+  public updateComments!: Comments;
 
   constructor(
     private _codesService: CodeService,
@@ -61,5 +64,11 @@ export class CommunityComponent implements OnInit {
       width: '800px',
       data: post,
     });
+
+    dialogRef.componentInstance.updateData.subscribe((_c) => {
+      this.posts
+        .filter((_post: Code) => _post.id == _c[0]
+        .codeId)[0].comments = _c
+    })
   }
 }
