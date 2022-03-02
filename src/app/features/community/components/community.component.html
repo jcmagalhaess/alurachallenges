@@ -24,8 +24,11 @@
         <div class="t-feed__actions">
           <app-badge [icon]="faComment" [count]="post.comments.length" (click)="modalOpen(post)">
           </app-badge>
-          <app-badge [icon]="faHeart" #like [status]="post.statusLike" [count]="post.countLike"
-            (click)="like.curtir(post.id);"></app-badge>
+          <app-badge
+            [icon]="faHeart"
+            [status]="post.statusLike"
+            [count]="post.countLike"
+            (click)="like(post)"></app-badge>
         </div>
         <div class="t-feed__author">
           <app-avatar></app-avatar>

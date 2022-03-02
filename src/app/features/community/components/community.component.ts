@@ -18,22 +18,21 @@ const ESPERA_DIGITACAO = 300;
   styleUrls: ['./community.component.scss'],
 })
 export class CommunityComponent implements OnInit {
-  public todosCodes$ = this._codesService.read();
-  public filtroPeloInput$ = this._communityService.postInput.valueChanges.pipe(
-    debounceTime(ESPERA_DIGITACAO),
-    filter(
-      (valorDigitado) => valorDigitado.length >= 3 || !valorDigitado.length
-    ),
-    distinctUntilChanged(),
-    switchMap((valorDigitado) => this._codesService.read(valorDigitado))
-  );
+  // public todosCodes$ = this._codesService.read();
+  // public filtroPeloInput$ = this._communityService.postInput.valueChanges.pipe(
+  //   debounceTime(ESPERA_DIGITACAO),
+  //   filter(
+  //     (valorDigitado) => valorDigitado.length >= 3 || !valorDigitado.length
+  //   ),
+  //   distinctUntilChanged(),
+  //   switchMap((valorDigitado) => this._codesService.read(valorDigitado))
+  // );
 
   public posts = JSON.parse(this._storage.get('code'))
 
-  public codes$ = merge(this.todosCodes$, this.filtroPeloInput$)
+  // public codes$ = merge(this.todosCodes$, this.filtroPeloInput$)
 
-  public syntaxFormat$ = new Subject<string>();
-  public colorFormat$ = new Subject<string>();
+  public likeFormat$ = new Subject<string>();
 
   public faMasonry = faStream;
   public faRegular = faBorderAll
@@ -45,15 +44,11 @@ export class CommunityComponent implements OnInit {
   public updateComments!: Comments;
 
   constructor(
-    private _codesService: CodeService,
-    private _communityService: CommunityService,
     private _storage: LocalStorageService,
     private _dialog: MatDialog
   ) {}
 
-  ngOnInit(): void {
-    this.colorFormat$.next('#fff')
-  }
+  ngOnInit(): void {}
 
   public toggleStructre() {
     this.structure = !this.structure
@@ -70,5 +65,15 @@ export class CommunityComponent implements OnInit {
         .filter((_post: Code) => _post.id == _c[0]
         .codeId)[0].comments = _c
     })
+  }
+
+  public like(post: Code) {
+    post.statusLike = !post.statusLike
+    
+    if ( post.statusLike == true ) {
+      post.countLike++
+    } else {
+      post.countLike--
+    }
   }
 }
